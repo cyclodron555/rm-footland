@@ -37,18 +37,18 @@ export default function AboutHero() {
             <div className="bg-background/95 backdrop-blur-sm border border-border rounded-lg p-8 lg:p-10 shadow-2xl">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <p className="text-sm font-medium tracking-widest text-primary uppercase">About Me</p>
-                  <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-balance leading-tight">
+                  <p className="text-base font-bold tracking-widest text-primary uppercase">About Me</p>
+                  <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-balance leading-tight font-bold">
                     Cyclodron Photography
                   </h1>
-                  <p className="text-xl text-muted-foreground font-light italic">
+                  <p className="text-2xl md:text-3xl text-muted-foreground font-light italic">
                     Capturing the Soul of British Columbia
                   </p>
                 </div>
 
                 <div className="h-px bg-gradient-to-r from-border to-transparent" />
 
-                <div className="space-y-4 text-foreground/90 leading-relaxed">
+                <div className="space-y-4 text-foreground/90 leading-relaxed text-lg">
                   <p>
                     I believe great photography is not just about images — it's about attention to detail, connection,
                     and emotional truth.
@@ -56,7 +56,7 @@ export default function AboutHero() {
 
                   <p>
                     Cyclodron Photography began with a simple idea:
-                    <span className="block mt-1 font-medium text-foreground">
+                    <span className="block mt-1 font-semibold text-foreground text-xl">
                       "Do what you love, and do it with absolute precision."
                     </span>
                   </p>
@@ -67,7 +67,7 @@ export default function AboutHero() {
                     estate, I approach every frame with care, intention, and professionalism.
                   </p>
 
-                  <p className="text-foreground font-medium pt-2">My work is built on three foundations:</p>
+                  <p className="text-foreground font-semibold pt-2 text-xl">My work is built on three foundations:</p>
                 </div>
               </div>
             </div>

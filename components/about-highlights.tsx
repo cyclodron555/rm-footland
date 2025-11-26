@@ -60,10 +60,10 @@ export default function AboutHighlights() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-2xl mb-4 text-foreground">{highlight.title}</h3>
+                  <h3 className="font-serif text-3xl md:text-4xl mb-4 text-foreground font-bold">{highlight.title}</h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
+                  <p className="text-muted-foreground leading-relaxed text-lg">{highlight.description}</p>
 
                   {/* Decorative accent */}
                   <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary to-primary/50 transition-all duration-500 group-hover:w-full rounded-b-lg" />
@@ -91,20 +91,22 @@ export default function AboutHighlights() {
 
             {/* Content */}
             <div className="relative px-8 py-16 md:px-16 md:py-20 text-center max-w-4xl mx-auto space-y-8">
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light">
+              <p className="text-2xl md:text-3xl text-foreground leading-relaxed font-medium">
                 For me, photography isn't a job — it's a calling.
               </p>
 
               <div className="space-y-4">
-                <p className="font-serif text-2xl md:text-3xl text-foreground/90">And my goal is simple:</p>
-                <p className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary font-light leading-tight">
+                <p className="font-serif text-3xl md:text-4xl text-foreground/90 font-semibold">
+                  And my goal is simple:
+                </p>
+                <p className="font-serif text-5xl md:text-6xl lg:text-7xl text-primary font-bold leading-tight">
                   Create images that last forever.
                 </p>
               </div>
 
               <div className="pt-6">
                 <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-6" />
-                <p className="text-lg md:text-xl text-muted-foreground italic">
+                <p className="text-xl md:text-2xl text-muted-foreground italic font-medium">
                   Let's create something unforgettable together.
                 </p>
               </div>

@@ -14,7 +14,7 @@ const slides = [
   },
   {
     image: "/images/dsc0137-hdr.jpg",
-    title: "Built Beauty",
+    title: "Interior Elegance",
     subtitle: "Real Estate Photography",
   },
   {
@@ -71,17 +71,19 @@ export function HeroSlideshow() {
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <div className="max-w-4xl space-y-6 animate-fade-in">
-          <p className="text-primary text-sm uppercase tracking-[0.3em] font-medium">{slides[currentSlide].subtitle}</p>
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground text-balance leading-tight">
+          <p className="text-primary text-base md:text-lg uppercase tracking-[0.3em] font-bold">
+            {slides[currentSlide].subtitle}
+          </p>
+          <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-foreground text-balance leading-tight">
             {slides[currentSlide].title}
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto text-pretty font-semibold">
             Capturing moments that define spaces and landscapes with cinematic precision
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 text-lg font-bold"
               onClick={scrollToBooking}
             >
               Book a Shoot
@@ -89,7 +91,7 @@ export function HeroSlideshow() {
             <Button
               size="lg"
               variant="outline"
-              className="border-foreground/30 text-foreground hover:bg-foreground/10 bg-transparent rounded-full px-8"
+              className="border-foreground/30 text-foreground hover:bg-foreground/10 bg-transparent rounded-full px-10 text-lg font-bold"
               asChild
             >
               <Link href="/portfolio">View Portfolio</Link>

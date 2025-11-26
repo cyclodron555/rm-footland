@@ -255,9 +255,9 @@ export const portfolioData: PortfolioItem[] = [
     id: "portraits-9",
     category: "portraits",
     src: "/images/dsc9882.jpeg",
-    title: "Intimate Moment",
-    description: "Intimate black and white portrait capturing genuine emotion",
-    alt: "Intimate black and white portrait with glasses",
+    title: "Classic B&W",
+    description: "Black and white portrait capturing genuine emotion",
+    alt: "Classic black and white portrait with glasses",
   },
   {
     id: "portraits-10",

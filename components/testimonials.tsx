@@ -14,13 +14,13 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Lisa Nicole",
-    role: "Realtor",
+    role: "Realtor®",
     quote:
       "Parviz did an incredible job capturing my listing in Grand Forks. Same-day turnaround and even provided vertical photos for marketing. Highly recommended!",
   },
   {
     name: "Leanne Babcock",
-    role: "REALTOR®",
+    role: "Realtor®",
     quote:
       "Outstanding photographer with exceptional drone work. Professional, responsive, and consistently delivers amazing results.",
   },
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "James Tyler",
-    role: "Client",
+    role: "Realtor®",
     quote:
       "I've worked with Parviz on multiple projects. He consistently delivers precise, high-quality photography and drone footage. Reliable and talented.",
   },
@@ -44,13 +44,13 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Lorena Gutierrez",
-    role: "Client",
+    role: "Event Client",
     quote:
       "Amazing work! Super professional, quick turnaround, and photos that truly captured the night. Couldn't be happier.",
   },
   {
     name: "Flec Demmon",
-    role: "Client",
+    role: "Realtor®",
     quote: "Great service. Work was done on my schedule with excellent quality. Highly recommend.",
   },
   {

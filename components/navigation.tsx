@@ -47,7 +47,7 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-10">
             <Link
               href="/portfolio"
-              className={`text-sm uppercase tracking-wider transition-all duration-300 relative group ${
+              className={`text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
                 pathname === "/portfolio" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -60,7 +60,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/about"
-              className={`text-sm uppercase tracking-wider transition-all duration-300 relative group ${
+              className={`text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
                 pathname === "/about" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -73,8 +73,8 @@ export function Navigation() {
             </Link>
             <Link href="#book-a-shoot" onClick={handleBookClick}>
               <Button
-                size="sm"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-medium"
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold text-base"
               >
                 Book a Shoot
               </Button>
@@ -98,7 +98,7 @@ export function Navigation() {
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
             <Link
               href="/portfolio"
-              className={`text-sm uppercase tracking-wider transition-colors py-2 ${
+              className={`text-base font-semibold uppercase tracking-wider transition-colors py-2 ${
                 pathname === "/portfolio" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
               onClick={() => setMobileMenuOpen(false)}
@@ -107,7 +107,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/about"
-              className={`text-sm uppercase tracking-wider transition-colors py-2 ${
+              className={`text-base font-semibold uppercase tracking-wider transition-colors py-2 ${
                 pathname === "/about" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
               onClick={() => setMobileMenuOpen(false)}
@@ -115,7 +115,7 @@ export function Navigation() {
               About
             </Link>
             <Link href="#book-a-shoot" onClick={handleBookClick}>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full mt-2 font-medium">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full mt-2 font-semibold text-base">
                 Book a Shoot
               </Button>
             </Link>
