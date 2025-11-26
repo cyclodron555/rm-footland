@@ -33,8 +33,21 @@ export default function AboutHighlights() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative py-24 lg:py-32">
+    <section ref={ref} className="relative py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-16 space-y-4"
+        >
+          <p className="text-sm font-bold tracking-widest text-primary uppercase">Core Values</p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+            My work is built on three foundations
+          </h2>
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
+        </motion.div>
+
         <div className="grid gap-8 md:grid-cols-3">
           {highlights.map((highlight, index) => {
             const Icon = highlight.icon
@@ -46,7 +59,7 @@ export default function AboutHighlights() {
                 transition={{
                   duration: 0.6,
                   ease: "easeOut",
-                  delay: index * 0.2,
+                  delay: index * 0.2 + 0.2,
                 }}
                 className="group relative"
               >
@@ -105,7 +118,7 @@ export default function AboutHighlights() {
               </div>
 
               <div className="pt-6">
-                <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-6" />
+                <div className="h-px w-32 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
                 <p className="text-xl md:text-2xl text-muted-foreground italic font-medium">
                   Let's create something unforgettable together.
                 </p>

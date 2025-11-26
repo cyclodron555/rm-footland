@@ -25,6 +25,7 @@ export default function AboutHero() {
               className="object-cover rounded-lg"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-black/20 to-black/30 rounded-lg" />
           </motion.div>
 
           {/* Overlapping content card on desktop, below on mobile */}
@@ -32,9 +33,9 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[55%] mt-8 lg:mt-0"
+            className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[55%] mt-8 lg:mt-0 z-20"
           >
-            <div className="bg-background/95 backdrop-blur-sm border border-border rounded-lg p-8 lg:p-10 shadow-2xl">
+            <div className="bg-background/95 backdrop-blur-md border border-border rounded-lg p-8 lg:p-10 shadow-2xl">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <p className="text-base font-bold tracking-widest text-primary uppercase">About Me</p>
@@ -66,8 +67,6 @@ export default function AboutHero() {
                     I'm shooting a quiet moment in the mountains, a family portrait, or the elegance of luxury real
                     estate, I approach every frame with care, intention, and professionalism.
                   </p>
-
-                  <p className="text-foreground font-semibold pt-2 text-xl">My work is built on three foundations:</p>
                 </div>
               </div>
             </div>
