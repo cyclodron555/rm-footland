@@ -185,6 +185,14 @@ export const portfolioData: PortfolioItem[] = [
     description: "Artistic aerial composition plays with perspective and inverted reflections",
     alt: "Black and white aerial artistic composition with inverted clouds and posts",
   },
+  {
+    id: "landscape-23",
+    category: "landscape",
+    src: "/images/dsc5609-hdr.jpeg",
+    title: "Frozen River",
+    description: "Frozen river with ice patterns and atmospheric fog",
+    alt: "Frozen river covered in patterned ice with low-lying fog in the distance",
+  },
 
   // Portraits
   {

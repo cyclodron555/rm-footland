@@ -38,8 +38,8 @@ const landscapeShowcase = [
   },
   {
     image: "/images/dsc5609-hdr.jpeg",
-    alt: "Frozen lake with ice patterns and atmospheric fog",
-    title: "Frozen Lake",
+    alt: "Frozen river with ice patterns and atmospheric fog",
+    title: "Frozen River",
   },
   {
     image: "/images/img-1858-enhanced1.jpeg",
