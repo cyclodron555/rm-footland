@@ -406,28 +406,12 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Log cabin bedroom with vaulted wood ceilings and rustic charm",
   },
   {
-    id: "real-estate-14",
-    category: "real-estate",
-    src: "/images/dsc6578-hdr.jpeg",
-    title: "Maple Kitchen",
-    description: "U-shaped kitchen featuring maple cabinets and accent color walls",
-    alt: "U-shaped kitchen with maple cabinets and green accent walls",
-  },
-  {
     id: "real-estate-15",
     category: "real-estate",
     src: "/images/dsc5927-hdr.jpeg",
     title: "Contemporary Bath",
     description: "Modern bathroom with double vanity, circular mirrors, and glass shower",
     alt: "Modern bathroom with double vanity, circular mirrors, and glass shower",
-  },
-  {
-    id: "real-estate-16",
-    category: "real-estate",
-    src: "/images/dsc6623-hdr.jpeg",
-    title: "Mountain View Dining",
-    description: "Dining room with cathedral ceilings and breathtaking mountain views",
-    alt: "Dining room with vaulted ceilings and mountain views",
   },
   {
     id: "real-estate-17",
@@ -460,14 +444,6 @@ export const portfolioData: PortfolioItem[] = [
     title: "Forest Home Aerial",
     description: "Aerial view of two-story house with wraparound deck in forest setting",
     alt: "Aerial view of two-story house with wraparound deck and cream siding",
-  },
-  {
-    id: "real-estate-21",
-    category: "real-estate",
-    src: "/images/dji-0965.jpeg",
-    title: "Dual Deck Exterior",
-    description: "Aerial shot showcasing modern house with dual level decks",
-    alt: "Aerial exterior shot of modern house with dual decks in forest setting",
   },
   {
     id: "real-estate-22",
