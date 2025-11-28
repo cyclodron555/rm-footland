@@ -228,14 +228,6 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Formal event portrait of two young women in elegant dresses",
   },
   {
-    id: "portraits-5",
-    category: "portraits",
-    src: "/images/dsc1611.jpeg",
-    title: "Regal Portrait",
-    description: "Close-up portrait featuring elegant tiara and formal styling",
-    alt: "Close-up portrait with tiara and lavender formal dress",
-  },
-  {
     id: "portraits-6",
     category: "portraits",
     src: "/images/dsc7987.jpeg",
@@ -476,6 +468,40 @@ export const portfolioData: PortfolioItem[] = [
     title: "Log Cabin Kitchen",
     description: "Bright kitchen with white cabinets and vaulted wood ceiling",
     alt: "Log cabin kitchen with white cabinets, center island, and vaulted wood ceiling",
+  },
+  {
+    id: "real-estate-26",
+    category: "real-estate",
+    src: "/images/inter1.jpg",
+    title: "Rustic Cabin Dining",
+    description: "Warm dining area with round wooden table, stone fireplace, and vaulted wood ceiling with chandelier",
+    alt: "Rustic cabin dining room with round wooden table, stone fireplace, and vaulted wood ceiling",
+  },
+  {
+    id: "real-estate-27",
+    category: "real-estate",
+    src: "/images/11280842.jpeg",
+    title: "Cozy Cabin Living",
+    description:
+      "Inviting log cabin living room featuring massive stone fireplace, wooden staircase, and abundant natural light",
+    alt: "Log cabin living room with large stone fireplace, wooden staircase, and wood storage area",
+  },
+  {
+    id: "real-estate-28",
+    category: "real-estate",
+    src: "/images/08011128.jpeg",
+    title: "Cathedral Living Space",
+    description:
+      "Stunning living room with cathedral ceilings, floor-to-ceiling windows, river rock fireplace, and luxury furnishings",
+    alt: "Elegant living room with cathedral ceiling, floor-to-ceiling windows, and river rock fireplace",
+  },
+  {
+    id: "real-estate-29",
+    category: "real-estate",
+    src: "/images/commercial1.jpg",
+    title: "Cinema Theater Interior",
+    description: "Professional movie theater featuring stadium seating, acoustic panels, and dramatic lighting design",
+    alt: "Movie theater interior with rows of stadium seating, blue walls with curtains, and acoustic ceiling panels",
   },
 ]
 
