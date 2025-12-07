@@ -193,6 +193,54 @@ export const portfolioData: PortfolioItem[] = [
     description: "Frozen river with ice patterns and atmospheric fog",
     alt: "Frozen river covered in patterned ice with low-lying fog in the distance",
   },
+  {
+    id: "landscape-24",
+    category: "landscape",
+    src: "/images/dsc8822-7.jpg",
+    title: "Winter River Serenity",
+    description: "Misty turquoise river with snow-covered logs creating perfect reflections beneath bare winter trees",
+    alt: "Serene winter river scene with turquoise water, snow-covered logs, misty fog, and bare trees creating reflections",
+  },
+  {
+    id: "landscape-25",
+    category: "landscape",
+    src: "/images/IMG_1688.jpeg",
+    title: "Ancient Forest Roots",
+    description: "Weathered tree stump with exposed roots spreading across mossy forest floor in lush green woodland",
+    alt: "Dramatic ancient tree stump with extensive root system on mossy forest floor surrounded by green foliage",
+  },
+  {
+    id: "landscape-26",
+    category: "landscape",
+    src: "/images/img-1508-new.jpg",
+    title: "Lighthouse Blue Hour",
+    description: "Red beacon light creates perfect reflection on still water during tranquil blue hour",
+    alt: "Lighthouse on jetty with red beacon creating vertical reflection on calm water at dusk",
+  },
+  {
+    id: "landscape-27",
+    category: "landscape",
+    src: "/images/dsc5550-2-new.jpg",
+    title: "River Stones at Dawn",
+    description: "Smooth river stones emerge from calm winter waters with pine trees reflecting in soft morning light",
+    alt: "Winter river scene with smooth rocks in foreground and pine trees reflecting in calm water at dawn",
+  },
+  {
+    id: "landscape-28",
+    category: "landscape",
+    src: "/images/dsc0890-new.jpg",
+    title: "Moonlight Frame",
+    description: "Minimalist wooden frame structure stands in still water with crescent moon in twilight sky",
+    alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
+  },
+  {
+    id: "landscape-29",
+    category: "landscape",
+    src: "/images/img-0643-new.jpg",
+    title: "Divine Seascape",
+    description: "Dramatic storm clouds with rays of light breaking through over ocean with distant navigation marker",
+    alt: "Dramatic seascape with stormy clouds, god rays breaking through, and lone navigation marker on horizon",
+  },
 
   // Portraits
   {
@@ -475,7 +523,7 @@ export const portfolioData: PortfolioItem[] = [
     src: "/images/inter1.jpg",
     title: "Rustic Cabin Dining",
     description: "Warm dining area with round wooden table, stone fireplace, and vaulted wood ceiling with chandelier",
-    alt: "Rustic cabin dining room with round wooden table, stone fireplace, and vaulted wood ceiling",
+    alt: "Rustic cabin dining room with round wooden table, stone fireplace, and wood storage area",
   },
   {
     id: "real-estate-27",
