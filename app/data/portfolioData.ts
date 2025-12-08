@@ -253,6 +253,14 @@ export const portfolioData: PortfolioItem[] = [
 
   // Portraits
   {
+    id: "portraits-0",
+    category: "portraits",
+    src: "/images/tuckers.jpeg",
+    title: "Summer Elegance",
+    description: "Radiant outdoor portrait with natural lighting and genuine warmth",
+    alt: "Outdoor portrait of woman in white lace dress and cream fedora hat with natural lighting",
+  },
+  {
     id: "portraits-1",
     category: "portraits",
     src: "/images/dsc0215.jpeg",
