@@ -241,6 +241,15 @@ export const portfolioData: PortfolioItem[] = [
     description: "Dramatic storm clouds with rays of light breaking through over ocean with distant navigation marker",
     alt: "Dramatic seascape with stormy clouds, god rays breaking through, and lone navigation marker on horizon",
   },
+  {
+    id: "landscape-30",
+    category: "landscape",
+    src: "/images/hummingbirdbridgegfsunset.jpg",
+    title: "Winter Bridge Crossing",
+    description:
+      "Weathered metal truss bridge spans across tranquil river waters with snow-covered rocks and winter landscape",
+    alt: "Historic metal truss bridge over calm river with snow-covered rocks in foreground during moody winter blue hour",
+  },
 
   // Portraits
   {
