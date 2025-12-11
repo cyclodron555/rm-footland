@@ -250,6 +250,38 @@ export const portfolioData: PortfolioItem[] = [
       "Weathered metal truss bridge spans across tranquil river waters with snow-covered rocks and winter landscape",
     alt: "Historic metal truss bridge over calm river with snow-covered rocks in foreground during moody winter blue hour",
   },
+  {
+    id: "landscape-31",
+    category: "landscape",
+    src: "/images/doukhs-beach-gf.jpg",
+    title: "Mountain River Reflections",
+    description: "Serene river scene with large granite boulders and perfect reflections of forested mountain peaks",
+    alt: "Calm river with large rocks in foreground, reflecting forested mountain and blue sky with clouds",
+  },
+  {
+    id: "landscape-32",
+    category: "landscape",
+    src: "/images/gilpin-kettle.jpg",
+    title: "Twilight Peninsula",
+    description: "Aerial view of curved sand peninsula surrounded by deep blue water at dramatic sunset",
+    alt: "Dramatic sunset over curved gravel peninsula island with pine trees and mountain backdrop",
+  },
+  {
+    id: "landscape-33",
+    category: "landscape",
+    src: "/images/doukhs-mill-gf.jpg",
+    title: "Historic Mill Heritage",
+    description: "Red heritage mill building with vintage millstones framed by dramatic cloudy skies",
+    alt: "Historic red mill with tall tower and two circular millstones in foreground under dramatic clouds",
+  },
+  {
+    id: "landscape-34",
+    category: "landscape",
+    src: "/images/doukhs-mill-oldbarn.jpg",
+    title: "Sunburst Barn",
+    description: "Weathered wooden barn on hillside with dramatic sunburst through trees at golden hour",
+    alt: "Old wooden barn with dramatic sunburst over ridge tree and golden grass in blue sky",
+  },
 
   // Portraits
   {

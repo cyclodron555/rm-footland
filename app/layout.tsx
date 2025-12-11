@@ -19,9 +19,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Cyclodron Photography | Real Estate & Landscape",
+  title: "Cyclodron Photography | Cinematic Landscape & Candid Visuals",
   description:
-    "Premium real estate and landscape photography services. Capturing stunning properties and breathtaking landscapes with cinematic precision.",
+    "Exploring the world through cinematic landscapes and authentic candid photography. Visual storytelling that brings emotion, atmosphere, and depth to every frame.",
   generator: "v0.app",
   icons: {
     icon: [
