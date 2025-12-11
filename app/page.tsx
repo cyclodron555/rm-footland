@@ -7,9 +7,9 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Cyclodron Photography | Real Estate & Landscape in BC",
+  title: "Cyclodron Photography | Cinematic Landscape & Candid Visuals",
   description:
-    "Premium real estate, landscape, and portrait photography in British Columbia. Cyclodron Photography delivers cinematic, high-resolution images with meticulous attention to detail.",
+    "Exploring the world through cinematic landscapes and authentic candid photography. Visual storytelling that brings emotion, atmosphere, and depth to every frame.",
   keywords: [
     "real estate photography",
     "landscape photography",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "portrait photography",
   ],
   openGraph: {
-    title: "Cyclodron Photography | Real Estate & Landscape in BC",
-    description:
-      "Premium real estate, landscape, and portrait photography in British Columbia. Cyclodron Photography delivers cinematic, high-resolution images with meticulous attention to detail.",
+    title: "Cyclodron Photography | Cinematic Landscape & Candid Visuals",
+  description:
+    "Exploring the world through cinematic landscapes and authentic candid photography. Visual storytelling that brings emotion, atmosphere, and depth to every frame.",
     url: "https://cyclodron.com",
     siteName: "Cyclodron Photography",
     images: [
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cyclodron Photography | Real Estate & Landscape in BC",
-    description:
-      "Premium real estate, landscape, and portrait photography in British Columbia. Cyclodron Photography delivers cinematic, high-resolution images with meticulous attention to detail.",
+    title: "Cyclodron Photography | Cinematic Landscape & Candid Visuals",
+  description:
+    "Exploring the world through cinematic landscapes and authentic candid photography. Visual storytelling that brings emotion, atmosphere, and depth to every frame.",
     images: ["https://cyclodron.com/logo.png"],
     creator: "@cyclodron",
   },
