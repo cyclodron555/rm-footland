@@ -44,8 +44,8 @@ ${message}`
               Book a Shoot
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed text-pretty">
-              Whether you need stunning real estate photography to showcase your property or breathtaking landscape
-              images, I'm here to bring your vision to life with professional, cinematic results.
+              Whether you need stunning real estate photography, breathtaking landscape images, or dynamic cityscape
+              shots, I'm here to bring your vision to life with professional, cinematic results.
             </p>
 
             <div className="space-y-6">
@@ -127,7 +127,8 @@ ${message}`
                 >
                   <option>Real Estate Photography</option>
                   <option>Landscape Photography</option>
-                  <option>Both Services</option>
+                  <option>Cityscape Photography</option>
+                  <option>Multiple Services</option>
                   <option>Other</option>
                 </select>
               </div>

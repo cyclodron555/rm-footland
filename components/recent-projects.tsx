@@ -7,14 +7,16 @@ const categoryLabels = {
   landscape: "Landscape",
   portraits: "Portraits",
   "real-estate": "Real Estate",
+  cityscape: "Cityscape",
 } as const
 
 export function RecentProjects() {
   const landscapeProject = pickRandomFromCategory("landscape")
   const portraitsProject = pickRandomFromCategory("portraits")
   const realEstateProject = pickRandomFromCategory("real-estate")
+  const cityscapeProject = pickRandomFromCategory("cityscape")
 
-  const projects = [realEstateProject, landscapeProject, portraitsProject]
+  const projects = [realEstateProject, landscapeProject, portraitsProject, cityscapeProject]
 
   return (
     <section id="work" className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
@@ -30,7 +32,7 @@ export function RecentProjects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <Link key={project.id} href="/portfolio" className="group relative overflow-hidden bg-card rounded-sm">
               <div className="aspect-[4/5] overflow-hidden relative">

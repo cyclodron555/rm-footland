@@ -6,12 +6,13 @@ import { Button } from "@/components/ui/button"
 import { ImageLightbox } from "@/components/image-lightbox"
 import { portfolioData, type PortfolioItem } from "@/app/data/portfolioData"
 
-type Genre = "landscape" | "portraits" | "real-estate"
+type Genre = "landscape" | "portraits" | "real-estate" | "cityscape"
 
 const groupedData: Record<Genre, PortfolioItem[]> = {
   landscape: portfolioData.filter((item) => item.category === "landscape"),
   portraits: portfolioData.filter((item) => item.category === "portraits"),
   "real-estate": portfolioData.filter((item) => item.category === "real-estate"),
+  cityscape: portfolioData.filter((item) => item.category === "cityscape"),
 }
 
 export function PortfolioGallery() {
@@ -23,6 +24,7 @@ export function PortfolioGallery() {
     { value: "landscape", label: "Landscape" },
     { value: "portraits", label: "Portraits" },
     { value: "real-estate", label: "Real Estate" },
+    { value: "cityscape", label: "Cityscape" },
   ]
 
   const openLightbox = (index: number) => {

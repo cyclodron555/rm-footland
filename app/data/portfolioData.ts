@@ -1,6 +1,6 @@
 export interface PortfolioItem {
   id: string
-  category: "landscape" | "portraits" | "real-estate"
+  category: "landscape" | "portraits" | "real-estate" | "cityscape"
   src: string
   title: string
   description: string
@@ -84,18 +84,10 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "landscape-10",
     category: "landscape",
-    src: "/images/dsc4843-12x28.jpeg",
-    title: "Highland Cattle",
-    description: "Majestic highland cattle graze in frosty fields surrounded by autumn colors",
-    alt: "Highland cattle in frosty field with golden autumn trees",
-  },
-  {
-    id: "landscape-11",
-    category: "landscape",
-    src: "/images/dsc0556.jpeg",
-    title: "Foggy Pier",
-    description: "A weathered wooden pier vanishes into the misty atmosphere in this minimalist composition",
-    alt: "Black and white wooden pier extending into foggy atmosphere",
+    src: "/images/img-1508-new.jpg",
+    title: "Lighthouse Red Glow",
+    description: "A dramatic lighthouse scene with striking red sky reflections on still waters",
+    alt: "Dramatic lighthouse scene with intense red sky reflections on calm water",
   },
   {
     id: "landscape-12",
@@ -104,14 +96,6 @@ export const portfolioData: PortfolioItem[] = [
     title: "Flowing Waters",
     description: "Long exposure captures the silky movement of water through autumn forest rocks",
     alt: "Long exposure of flowing water around rocks with autumn forest backdrop",
-  },
-  {
-    id: "landscape-13",
-    category: "landscape",
-    src: "/images/dsc2973.jpeg",
-    title: "Winter Monument",
-    description: "Snow-covered posts create stark geometric patterns in this minimalist winter scene",
-    alt: "Black and white minimalist winter monument scene with snow-covered posts",
   },
   {
     id: "landscape-14",
@@ -138,54 +122,6 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Misty mountain peak with autumn colors emerging through clouds",
   },
   {
-    id: "landscape-17",
-    category: "landscape",
-    src: "/images/dsc0551.jpeg",
-    title: "Ancient Pilings",
-    description: "Weathered wooden pilings stand like sentinels in the calm reflective waters",
-    alt: "Black and white minimalist old wooden pilings in still water",
-  },
-  {
-    id: "landscape-18",
-    category: "landscape",
-    src: "/images/dsc0554.jpeg",
-    title: "Foggy Boardwalk",
-    description: "Leading lines draw the eye into the mysterious foggy distance along the boardwalk",
-    alt: "Black and white foggy boardwalk perspective with dramatic leading lines",
-  },
-  {
-    id: "landscape-19",
-    category: "landscape",
-    src: "/images/dsc5763.jpeg",
-    title: "Sunrise Solitude",
-    description: "A lone boat floats peacefully on calm waters reflecting golden sunrise colors",
-    alt: "Serene sunrise with lone boat on calm water, golden reflections and gentle ripples",
-  },
-  {
-    id: "landscape-20",
-    category: "landscape",
-    src: "/images/img-3751-enhanced.jpeg",
-    title: "Harbor Wildflowers",
-    description: "Purple wildflowers frame the fishing boat during a dramatic orange sunset",
-    alt: "Fishing boat at harbor during dramatic orange sunset with purple wildflowers",
-  },
-  {
-    id: "landscape-21",
-    category: "landscape",
-    src: "/images/img-1525-enhanced.jpg",
-    title: "Blue Hour Navigation",
-    description: "Green navigation light creates mystical reflections during the blue hour",
-    alt: "Blue hour long exposure with rock and green navigation light reflecting on calm water",
-  },
-  {
-    id: "landscape-22",
-    category: "landscape",
-    src: "/images/dji-0361.jpeg",
-    title: "Inverted Reality",
-    description: "Artistic aerial composition plays with perspective and inverted reflections",
-    alt: "Black and white aerial artistic composition with inverted clouds and posts",
-  },
-  {
     id: "landscape-23",
     category: "landscape",
     src: "/images/dsc5609-hdr.jpeg",
@@ -196,45 +132,41 @@ export const portfolioData: PortfolioItem[] = [
   {
     id: "landscape-24",
     category: "landscape",
-    src: "/images/dsc8822-7.jpg",
-    title: "Winter River Serenity",
-    description: "Misty turquoise river with snow-covered logs creating perfect reflections beneath bare winter trees",
-    alt: "Serene winter river scene with turquoise water, snow-covered logs, misty fog, and bare trees creating reflections",
+    src: "/images/cloudy-sunset-st-kettle-river-gf.jpeg",
+    title: "Twilight River Reflections",
+    description:
+      "Moody winter evening along the Kettle River with bare tree silhouettes against cloudy skies and rocky shoreline",
+    alt: "Winter river scene with bare trees silhouetted against cloudy blue-gray twilight sky and rocky shoreline",
   },
   {
     id: "landscape-25",
     category: "landscape",
-    src: "/images/IMG_1688.jpeg",
-    title: "Ancient Forest Roots",
-    description: "Weathered tree stump with exposed roots spreading across mossy forest floor in lush green woodland",
-    alt: "Dramatic ancient tree stump with extensive root system on mossy forest floor surrounded by green foliage",
+    src: "/images/kettleriver-walk-sunset-gloomy-gf.jpeg",
+    title: "Serene Winter Waters",
+    description:
+      "Tranquil river landscape with perfect mirror reflections of snow-dusted banks and trees under overcast winter skies",
+    alt: "Peaceful winter river with perfect reflections of trees and snow-covered banks under gloomy overcast sky",
   },
   {
     id: "landscape-26",
     category: "landscape",
-    src: "/images/img-1508-new.jpg",
-    title: "Lighthouse Blue Hour",
-    description: "Red beacon light creates perfect reflection on still water during tranquil blue hour",
-    alt: "Lighthouse on jetty with red beacon creating vertical reflection on calm water at dusk",
+    src: "/images/kettleriver-gf-facing-north.jpeg",
+    title: "Mountain River Vista",
+    description:
+      "Stunning winter view of pristine blue-teal river waters with snow-covered mountains shrouded in clouds and bare trees lining both banks",
+    alt: "Winter river with snow-covered mountains in background shrouded in clouds and bare trees creating reflections",
   },
   {
     id: "landscape-27",
     category: "landscape",
-    src: "/images/dsc5550-2-new.jpg",
-    title: "River Stones at Dawn",
-    description: "Smooth river stones emerge from calm winter waters with pine trees reflecting in soft morning light",
-    alt: "Winter river scene with smooth rocks in foreground and pine trees reflecting in calm water at dawn",
+    src: "/images/riverstones-reflection-gf-granbyriver.jpeg",
+    title: "River Stones Detail",
+    description:
+      "Intimate view of rocky riverbank with snow-covered logs and smooth stones visible through crystal clear shallow water",
+    alt: "Close-up of rocky riverbank with snow-covered logs and river stones visible through clear shallow water",
   },
   {
     id: "landscape-28",
-    category: "landscape",
-    src: "/images/dsc0890-new.jpg",
-    title: "Moonlight Frame",
-    description: "Minimalist wooden frame structure stands in still water with crescent moon in twilight sky",
-    alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
-  },
-  {
-    id: "landscape-29",
     category: "landscape",
     src: "/images/img-0643-new.jpg",
     title: "Divine Seascape",
@@ -242,7 +174,7 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Dramatic seascape with stormy clouds, god rays breaking through, and lone navigation marker on horizon",
   },
   {
-    id: "landscape-30",
+    id: "landscape-29",
     category: "landscape",
     src: "/images/hummingbirdbridgegfsunset.jpg",
     title: "Winter Bridge Crossing",
@@ -251,7 +183,7 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Historic metal truss bridge over calm river with snow-covered rocks in foreground during moody winter blue hour",
   },
   {
-    id: "landscape-31",
+    id: "landscape-30",
     category: "landscape",
     src: "/images/doukhs-beach-gf.jpg",
     title: "Mountain River Reflections",
@@ -259,7 +191,7 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Calm river with large rocks in foreground, reflecting forested mountain and blue sky with clouds",
   },
   {
-    id: "landscape-32",
+    id: "landscape-31",
     category: "landscape",
     src: "/images/gilpin-kettle.jpg",
     title: "Twilight Peninsula",
@@ -267,7 +199,7 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Dramatic sunset over curved gravel peninsula island with pine trees and mountain backdrop",
   },
   {
-    id: "landscape-33",
+    id: "landscape-32",
     category: "landscape",
     src: "/images/doukhs-mill-gf.jpg",
     title: "Historic Mill Heritage",
@@ -275,7 +207,7 @@ export const portfolioData: PortfolioItem[] = [
     alt: "Historic red mill with tall tower and two circular millstones in foreground under dramatic clouds",
   },
   {
-    id: "landscape-34",
+    id: "landscape-33",
     category: "landscape",
     src: "/images/doukhs-mill-oldbarn.jpg",
     title: "Sunburst Barn",
@@ -600,15 +532,92 @@ export const portfolioData: PortfolioItem[] = [
     description: "Professional movie theater featuring stadium seating, acoustic panels, and dramatic lighting design",
     alt: "Movie theater interior with rows of stadium seating, blue walls with curtains, and acoustic ceiling panels",
   },
+
+  // Cityscape
+  {
+    id: "cityscape-0",
+    category: "cityscape",
+    src: "/images/bakunightparkkirova.jpg",
+    title: "Baku Nights",
+    description:
+      "Spectacular aerial night view of Baku's illuminated waterfront promenade, modern architecture, and the iconic Flame Towers",
+    alt: "Aerial night view of Baku, Azerbaijan showing illuminated cityscape, waterfront, modern buildings and Flame Towers with water reflections",
+  },
+  {
+    id: "cityscape-1",
+    category: "cityscape",
+    src: "/images/kettleriver-blackbridgegf.jpg",
+    title: "Bridge Perspective",
+    description:
+      "Dramatic black and white industrial bridge photograph with powerful leading lines and vanishing point perspective",
+    alt: "Black and white photograph from center of industrial truss bridge with strong leading lines and dramatic perspective",
+  },
+  {
+    id: "cityscape-2",
+    category: "cityscape",
+    src: "/images/vancatnight120925.jpg",
+    title: "Vancouver Waterfront",
+    description:
+      "Beautiful night cityscape of Vancouver's illuminated high-rise buildings and marina with reflections dancing on the water",
+    alt: "Night photograph of Vancouver waterfront with illuminated buildings, marina boats, and city lights reflecting on water",
+  },
+  {
+    id: "cityscape-3",
+    category: "cityscape",
+    src: "/images/dsc0556.jpeg",
+    title: "Foggy Pier",
+    description: "A weathered wooden pier vanishes into the misty atmosphere in this minimalist composition",
+    alt: "Black and white wooden pier extending into foggy atmosphere",
+  },
+  {
+    id: "cityscape-4",
+    category: "cityscape",
+    src: "/images/dsc2973.jpeg",
+    title: "Winter Monument",
+    description: "Snow-covered posts create stark geometric patterns in this minimalist winter scene",
+    alt: "Black and white minimalist winter monument scene with snow-covered posts",
+  },
+  {
+    id: "cityscape-5",
+    category: "cityscape",
+    src: "/images/dsc0551.jpeg",
+    title: "Ancient Pilings",
+    description: "Weathered wooden pilings stand like sentinels in the calm reflective waters",
+    alt: "Black and white minimalist old wooden pilings in still water",
+  },
+  {
+    id: "cityscape-6",
+    category: "cityscape",
+    src: "/images/dsc0554.jpeg",
+    title: "Foggy Boardwalk",
+    description: "Leading lines draw the eye into the mysterious foggy distance along the boardwalk",
+    alt: "Black and white foggy boardwalk perspective with dramatic leading lines",
+  },
+  {
+    id: "cityscape-7",
+    category: "cityscape",
+    src: "/images/dji-0361.jpeg",
+    title: "Inverted Reality",
+    description: "Artistic aerial composition plays with perspective and inverted reflections",
+    alt: "Black and white aerial artistic composition with inverted clouds and posts",
+  },
+  {
+    id: "cityscape-8",
+    category: "cityscape",
+    src: "/images/dsc0890-new.jpg",
+    title: "Moonlight Frame",
+    description: "Minimalist wooden frame structure stands in still water with crescent moon in twilight sky",
+    alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
+  },
 ]
 
 // Helper function to get items by category
-export function getPortfolioByCategory(category: "landscape" | "portraits" | "real-estate") {
+export function getPortfolioByCategory(category: "landscape" | "portraits" | "real-estate" | "cityscape") {
   return portfolioData.filter((item) => item.category === category)
 }
 
 // Helper function to pick random item from category
-export function pickRandomFromCategory(category: "landscape" | "portraits" | "real-estate") {
+export function pickRandomFromCategory(category: "landscape" | "portraits" | "real-estate" | "cityscape") {
   const items = getPortfolioByCategory(category)
   return items[Math.floor(Math.random() * items.length)]
 }

@@ -77,6 +77,15 @@ export function SchemaMarkup() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Cityscape Photography",
+            description:
+              "Dynamic urban and cityscape photography showcasing architectural beauty and city life with cinematic precision.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Portrait Photography",
             description:
               "Artistic portrait photography for individuals, families, and businesses with attention to detail.",

@@ -8,7 +8,7 @@ import Image from "next/image"
 
 const slides = [
   {
-    image: "/images/dsc4433-12x28.jpeg",
+    image: "/images/dsc0969.jpeg",
     title: "Nature's Canvas",
     subtitle: "Landscape Photography",
   },
@@ -35,7 +35,7 @@ export function HeroSlideshow() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 7000)
     return () => clearInterval(timer)
   }, [])
 
