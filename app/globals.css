@@ -38,6 +38,11 @@
   --sidebar-accent-foreground: oklch(0.95 0 0);
   --sidebar-border: oklch(0.25 0 0);
   --sidebar-ring: oklch(0.68 0.08 75);
+
+  /* Added mood-based theme variables */
+  --mood-primary: var(--primary);
+  --mood-accent: var(--accent);
+  --mood-muted: var(--muted);
 }
 
 .dark {

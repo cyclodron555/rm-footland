@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Playfair_Display, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SchemaMarkup } from "@/components/schema-markup"
+import { MoodProvider } from "@/components/mood-provider"
 import "./globals.css"
 
 // Updated fonts for premium photography aesthetic
@@ -53,7 +54,7 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        {children}
+        <MoodProvider>{children}</MoodProvider>
         <Analytics />
       </body>
     </html>
