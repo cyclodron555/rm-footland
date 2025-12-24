@@ -59,8 +59,8 @@ export function Footer() {
             <h3 className="text-foreground font-semibold mb-6 tracking-wide text-sm uppercase">Quick Links</h3>
             <ul className="space-y-4">
               <li>
-                <Link href="#work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Portfolio
+                <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
@@ -69,12 +69,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#book-a-shoot"
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://patreon.com/Cyclodron"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Book a Shoot
-                </Link>
+                  Patreon
+                </a>
               </li>
             </ul>
           </div>
