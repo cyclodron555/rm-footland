@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -66,4 +67,11 @@ export default function PortfolioPage() {
       <Footer />
     </main>
   )
+}
+*/
+
+import { redirect } from "next/navigation"
+
+export default function PortfolioPage() {
+  redirect("/")
 }
