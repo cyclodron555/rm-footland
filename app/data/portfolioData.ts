@@ -214,6 +214,72 @@ export const portfolioData: PortfolioItem[] = [
     description: "Weathered wooden barn on hillside with dramatic sunburst through trees at golden hour",
     alt: "Old wooden barn with dramatic sunburst over ridge tree and golden grass in blue sky",
   },
+  {
+    id: "landscape-34",
+    category: "landscape",
+    src: "/images/dsc5210landfillmountainsGF.jpeg",
+    title: "Mountain Vista",
+    description: "Majestic mountain peaks rise above the landscape in pristine natural beauty",
+    alt: "Panoramic view of mountain range with dramatic peaks and natural landscape",
+  },
+  {
+    id: "landscape-35",
+    category: "landscape",
+    src: "/images/dsc5550-2-newunderthebridge2JerseyLand.jpg",
+    title: "Under The Bridge",
+    description: "Architectural perspective from beneath an iconic bridge structure",
+    alt: "View from underneath a bridge with architectural details and landscape beyond",
+  },
+  {
+    id: "landscape-36",
+    category: "landscape",
+    src: "/images/dsc5763zanzibarsunrisewnasir.jpeg",
+    title: "Zanzibar Sunrise",
+    description: "Golden sunrise illuminates the tropical waters of Zanzibar with warm light",
+    alt: "Stunning sunrise over Zanzibar coastline with golden light reflecting on water",
+  },
+  {
+    id: "landscape-37",
+    category: "landscape",
+    src: "/images/dsc8822-7_underthehummnigbirdbridgeGF.jpg",
+    title: "Hummingbird Bridge",
+    description: "Historic bridge spans across tranquil waters in this serene composition",
+    alt: "Historic bridge crossing over calm water with natural surroundings",
+  },
+  {
+    id: "landscape-38",
+    category: "landscape",
+    src: "/images/img-1525-enhancedRichmondOceanView.jpg",
+    title: "Richmond Ocean View",
+    description: "Expansive ocean view from Richmond coastline with distant horizons",
+    alt: "Wide ocean vista from Richmond shoreline with dramatic sky and distant horizon",
+  },
+  {
+    id: "landscape-39",
+    category: "landscape",
+    src: "/images/img-3751-enhancedbestsellerSunset.jpeg",
+    title: "Bestseller Sunset",
+    description: "An iconic sunset scene that captures the golden hour at its finest",
+    alt: "Dramatic golden hour sunset with vibrant colors and silhouetted landscape",
+  },
+  {
+    id: "landscape-40",
+    category: "landscape",
+    src: "/images/messybusinessattheborderwithUS.jpeg",
+    title: "Border Reflections",
+    description:
+      "Serene winter landscape with perfect mirror reflections on calm waters, fallen logs, and dramatic sunset sky over snow-dusted shoreline",
+    alt: "Tranquil lake with perfect mirror reflections of trees, mountains, and dramatic sunset clouds with fallen logs in foreground",
+  },
+  {
+    id: "landscape-41",
+    category: "landscape",
+    src: "/images/lotrsunsetinGrandForkslandfilmountain.jpeg",
+    title: "Landfill Mountain Drama",
+    description:
+      "Moody landscape featuring rugged rocky cliffs, sparse vegetation, and dramatic overcast skies over mountainous terrain",
+    alt: "Dramatic moody landscape with rocky cliff face, green hillside, and dark stormy clouds over mountains",
+  },
 
   // Portraits
   {
