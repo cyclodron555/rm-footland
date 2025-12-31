@@ -675,6 +675,22 @@ export const portfolioData: PortfolioItem[] = [
     description: "Minimalist wooden frame structure stands in still water with crescent moon in twilight sky",
     alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
   },
+  {
+    id: "cityscape-9",
+    category: "cityscape",
+    src: "/images/nightcity_grandForks.jpeg",
+    title: "Moonlight Frame",
+    description: "Minimalist wooden frame structure stands in still water with crescent moon in twilight sky",
+    alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
+  },
+  {
+    id: "cityscape-10",
+    category: "cityscape",
+    src: "/images/lastnightoverGFcityhall.jpeg",
+    title: "City Hall afther the light",
+    description: "Sunset, dramatic sky, and motion",
+    alt: "Wooden pier frame silhouetted in still water with crescent moon and blue hour gradient sky",
+  },
 ]
 
 // Helper function to get items by category
