@@ -28,7 +28,6 @@ export default function AboutHero() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-black/20 to-black/30 rounded-lg" />
           </motion.div>
 
-          {/* Overlapping content card on desktop, below on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,12 +37,12 @@ export default function AboutHero() {
             <div className="bg-background/95 backdrop-blur-md border border-border rounded-lg p-8 lg:p-10 shadow-2xl">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <p className="text-base font-bold tracking-widest text-primary uppercase">About Me</p>
-                  <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-balance leading-tight font-bold">
-                    Cyclodron Photography
+                  <p className="text-base font-bold tracking-widest text-primary uppercase">About</p>
+                  <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-balance leading-tight font-bold">
+                    I didn't come to photography to collect images.
                   </h1>
-                  <p className="text-2xl md:text-3xl text-muted-foreground font-light italic">
-                    Capturing the Soul of British Columbia
+                  <p className="text-2xl md:text-3xl text-muted-foreground font-light">
+                    I came to it to learn how to pay attention.
                   </p>
                 </div>
 
@@ -51,21 +50,15 @@ export default function AboutHero() {
 
                 <div className="space-y-4 text-foreground/90 leading-relaxed text-lg">
                   <p>
-                    I believe great photography is not just about images — it's about attention to detail, connection,
-                    and emotional truth.
+                    Somewhere along the way, I realized that the most meaningful moments aren't loud or dramatic —
+                    they're quiet, fleeting, and easy to miss if you're rushing. Photography became my way of slowing
+                    down enough to notice them.
                   </p>
 
-                  <p>
-                    Cyclodron Photography began with a simple idea:
-                    <span className="block mt-1 font-semibold text-foreground text-xl">
-                      "Do what you love, and do it with absolute precision."
-                    </span>
-                  </p>
-
-                  <p>
-                    Photography is where my mind focuses, my creativity comes alive, and my soul feels at home. Whether
-                    I'm shooting a quiet moment in the mountains, a family portrait, or the elegance of luxury real
-                    estate, I approach every frame with care, intention, and professionalism.
+                  <p className="font-semibold text-foreground text-xl">
+                    For me, great photography isn't just about how something looks.
+                    <br />
+                    It's about presence, connection, and emotional truth.
                   </p>
                 </div>
               </div>
