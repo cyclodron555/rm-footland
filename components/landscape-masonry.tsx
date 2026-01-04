@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
 import { portfolioData } from "@/app/data/portfolioData"
+import { ImageLightbox } from "@/components/image-lightbox"
 
 function interleaveByOrientation(photos: typeof portfolioData) {
   // Create a shuffled copy to start with randomness
@@ -43,6 +44,10 @@ export function LandscapeMasonry() {
   const [hasMore, setHasMore] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
   const observerTarget = useRef<HTMLDivElement>(null)
+
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+  const scrollPositionRef = useRef(0)
 
   const BATCH_SIZE = 12
 
@@ -95,6 +100,28 @@ export function LandscapeMasonry() {
     }
   }, [loadMore, hasMore, isLoading])
 
+  const handleImageClick = (index: number) => {
+    scrollPositionRef.current = window.scrollY
+    setLightboxIndex(index)
+    setLightboxOpen(true)
+  }
+
+  const handleCloseLightbox = () => {
+    setLightboxOpen(false)
+    // Restore scroll position after lightbox closes
+    setTimeout(() => {
+      window.scrollTo(0, scrollPositionRef.current)
+    }, 0)
+  }
+
+  const handleNext = () => {
+    setLightboxIndex((prev) => (prev + 1) % visibleImages.length)
+  }
+
+  const handlePrevious = () => {
+    setLightboxIndex((prev) => (prev - 1 + visibleImages.length) % visibleImages.length)
+  }
+
   return (
     <div className="w-full">
       <div
@@ -116,7 +143,10 @@ export function LandscapeMasonry() {
               animationDelay: `${(index % BATCH_SIZE) * 30}ms`,
             }}
           >
-            <div className="relative group overflow-hidden bg-black/20">
+            <div
+              className="relative group overflow-hidden bg-black/20 cursor-pointer"
+              onClick={() => handleImageClick(index)}
+            >
               <Image
                 src={photo.src || "/placeholder.svg"}
                 alt={photo.alt}
@@ -142,6 +172,16 @@ export function LandscapeMasonry() {
         {isLoading && <div className="text-muted-foreground text-sm">Loading more...</div>}
         {!hasMore && visibleImages.length > 0 && <div className="text-muted-foreground text-sm">All images loaded</div>}
       </div>
+
+      {lightboxOpen && (
+        <ImageLightbox
+          images={visibleImages.map((photo) => ({ src: photo.src || "/placeholder.svg", alt: photo.alt }))}
+          currentIndex={lightboxIndex}
+          onClose={handleCloseLightbox}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+        />
+      )}
     </div>
   )
 }
