@@ -278,7 +278,23 @@ export const portfolioData: PortfolioItem[] = [
     title: "Landfill Mountain Drama",
     description:
       "Moody landscape featuring rugged rocky cliffs, sparse vegetation, and dramatic overcast skies over mountainous terrain",
-    alt: "Dramatic moody landscape with rocky cliff face, green hillside, and dark stormy clouds over mountains",
+    alt: "Moody landscape with rocky cliffs, sparse trees, and dramatic overcast skies over mountains",
+  },
+  {
+    id: "landscape-42",
+    category: "landscape",
+    src: "/images/Black Bridge Grand Forks, Jan 2026.jpeg",
+    title: "Black Bridge Grand Forks",
+    description: "Historic black bridge spans across tranquil winter waters in Grand Forks, January 2026",
+    alt: "Black bridge crossing over calm winter river in Grand Forks with snow-covered landscape",
+  },
+  {
+    id: "landscape-43",
+    category: "landscape",
+    src: "/images/winterriverGrandf.jpeg",
+    title: "Winter River Grand Forks",
+    description: "Serene winter river scene in Grand Forks with snow-covered banks and calm waters",
+    alt: "Peaceful winter river in Grand Forks with snow-covered shores and tranquil atmosphere",
   },
 
   // Portraits
