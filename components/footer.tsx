@@ -6,15 +6,16 @@ export function Footer() {
   return (
     <footer className="bg-secondary/30 border-t border-border py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <Image src="/logo.png" alt="Cyclodron Photography" width={180} height={60} className="h-12 w-auto" />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-md">
-              Professional real estate and landscape photography services. Capturing the essence of spaces and the
-              beauty of nature with cinematic precision.
+              Quiet photography and ambient filmmaking. Exploring real places, real light, and the beauty that exists
+              without interruption.
             </p>
+            {/* </CHANGE> */}
             <div className="flex gap-5">
               <a
                 href="https://www.instagram.com/cyclodron/"
