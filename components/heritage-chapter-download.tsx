@@ -13,9 +13,10 @@ export function HeritageChapterDownload({ downloadLink, chapterName }: HeritageC
 
   return (
     <div className="mt-16 py-12 px-8 bg-gradient-to-br from-gray-50 to-white rounded-lg border border-gray-200 text-center">
-      <h3 className="font-serif text-2xl text-gray-900 mb-3">Preserve the History</h3>
+      <h3 className="font-serif text-2xl text-gray-900 mb-3">Support the Project</h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Download high-resolution, print-quality versions of all {chapterName} photos for your collection or research.
+        If this work resonates with you, you can download print-quality versions of these photographs. Your support
+        helps me continue documenting Grand Forks, quietly and independently.
       </p>
       <Button
         size="lg"

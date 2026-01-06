@@ -81,6 +81,15 @@ export function Navigation() {
               Patreon
               <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full"></span>
             </Link>
+            <Link
+              href="https://cyclodron.gumroad.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group text-accent hover:text-accent/80"
+            >
+              Downloads
+              <span className="absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 w-0 group-hover:w-full"></span>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,6 +142,15 @@ export function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Patreon
+            </Link>
+            <Link
+              href="https://cyclodron.gumroad.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-semibold uppercase tracking-wider transition-colors py-2 text-accent hover:text-accent/80"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Downloads
             </Link>
           </div>
         </div>
