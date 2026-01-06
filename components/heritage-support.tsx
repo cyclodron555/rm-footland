@@ -13,13 +13,17 @@ export function HeritageSupport() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
           <Link
-            href="#"
+            href="https://cyclodron.gumroad.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-gray-900 text-white rounded-sm hover:bg-gray-800 transition-colors font-medium"
           >
             Download Print-Quality Photos
           </Link>
           <Link
-            href="#"
+            href="https://cyclodron.gumroad.com/l/zfnuud"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-sm hover:bg-gray-50 transition-colors font-medium"
           >
             Support the Project
