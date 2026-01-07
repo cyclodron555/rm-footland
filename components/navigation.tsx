@@ -25,17 +25,17 @@ export function Navigation() {
         scrolled ? "border-b border-border" : ""
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="Cyclodron" width={144} height={96} priority className="h-16 sm:h-24 w-auto" />
+            <Image src="/logo.png" alt="Cyclodron" width={120} height={80} priority className="h-12 sm:h-20 w-auto" />
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
-              className={`text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
+              className={`text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
                 pathname === "/" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -48,7 +48,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/about"
-              className={`text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
+              className={`text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
                 pathname === "/about" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -61,7 +61,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/contact"
-              className={`text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
+              className={`text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group ${
                 pathname === "/contact" ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -76,7 +76,7 @@ export function Navigation() {
               href="https://patreon.com/Cyclodron"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group text-foreground/70 hover:text-foreground"
+              className="text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group text-foreground/70 hover:text-foreground"
             >
               Patreon
               <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full"></span>
@@ -85,7 +85,7 @@ export function Navigation() {
               href="https://cyclodron.gumroad.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-semibold uppercase tracking-wider transition-all duration-300 relative group text-accent hover:text-accent/80"
+              className="text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group text-accent hover:text-accent/80"
             >
               Downloads
               <span className="absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 w-0 group-hover:w-full"></span>
