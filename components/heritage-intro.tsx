@@ -2,28 +2,56 @@ export function HeritageIntro() {
   return (
     <section className="w-full bg-white py-16 px-6">
       <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-lg">
-        <p>
-          Grand Forks has a quiet way of staying with you. Not through grand monuments or polished landmarks — but
-          through the everyday details that hold time in place: an old doorway that has opened for generations, a faded
-          sign still doing its job, a bridge corner shaped by weather and footsteps, a brick edge that catches the
-          morning light the same way it did decades ago.
+        
+        {/* Opening line — bold, no italic */}
+        <p className="font-semibold text-gray-800">
+          This project was born quietly.
         </p>
+
         <p>
-          This living photo book is my way of documenting those small pieces of heritage — the buildings, storefronts,
-          corners, and surfaces that make Grand Forks feel like Grand Forks. Some of these places are officially
-          recognized. Many are not. But they all carry memory: the kind you don't notice until you slow down.
+          My family and I arrived in Grand Forks not knowing how deeply this town would become part of our lives.
+          What we found here was warmth — real warmth — in people, in conversations, in small everyday moments
+          that made a place feel like home.
         </p>
+
         <p>
-          I'll keep adding to this collection over time as I walk, photograph, and learn more about each location. The
-          project is free to explore and share — and if you'd like to own print-quality versions to hang on your wall,
-          you'll have an option to download high-resolution files and support future work.
+          Photography, if left unprinted, slowly disappears. Files get lost. Hard drives fail. Memory fades.
+          But when an image becomes something you can hold, something you can return to, it turns into history.
         </p>
-        <div className="pt-6 space-y-2 text-base">
-          <p className="font-medium text-gray-800">If you live here, I hope this feels like home.</p>
-          <p className="font-medium text-gray-800">
-            If you're visiting, I hope it helps you see the town the way it looks when it's quiet.
+
+        <p className="font-medium text-gray-800">
+          This album is my way of saying thank you.
+        </p>
+
+        <p>
+          Thank you to the people of Grand Forks for the kindness, the openness, and the sense of belonging you
+          gave us over five meaningful years. These photographs are not meant to be perfect or timeless — only
+          honest. They capture corners, buildings, and details that quietly hold the memory of this town.
+        </p>
+
+        <p>
+          My hope is simple: that this collection helps preserve a little of what makes Grand Forks feel like
+          Grand Forks — so it can be remembered, revisited, and passed forward for years to come.
+        </p>
+
+        {/* Signature — italic */}
+        <p className="pt-4 italic text-gray-800">
+          — Cyclodron
+        </p>
+
+        {/* Small note — italic, subtle */}
+        <div className="pt-6 space-y-2 text-base italic text-gray-600">
+          <p>
+            <span className="font-medium text-gray-700">A small note:</span> If your home or building isn’t included here,
+            I’m sorry. I focused mostly on structures that feel early-1900s (give or take), and I’m sure I missed
+            places that matter.
+          </p>
+          <p>
+            If you have a heritage home — or one that truly carries that older character — feel free to message me.
+            If you send a photo, or if a friend can capture it for you, I’ll happily consider adding it to the album over time.
           </p>
         </div>
+
       </div>
     </section>
   )
