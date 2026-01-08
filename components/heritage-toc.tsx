@@ -6,7 +6,7 @@ const heritageSections = [
     title: "Downtown Details",
     description:
       "Historic storefronts and architectural details of downtown Grand Forks, capturing the character of the main street and its enduring structures.",
-    imageUrl: "/historic-downtown-storefront.jpg",
+    imageUrl: "/historic-downtown-storefront.jpeg",
     href: "/grand-forks-heritage/downtown-details",
   },
   {
@@ -14,7 +14,7 @@ const heritageSections = [
     title: "Early Grand Forks",
     description:
       "The earliest remaining buildings in Grand Forks, showcasing the architectural styles and construction methods from the town's founding era.",
-    imageUrl: "/early-1900s-heritage-building.jpg",
+    imageUrl: "/early-1900s-heritage-building.jpeg",
     href: "/grand-forks-heritage/early-grand-forks",
   },
   {
@@ -22,7 +22,7 @@ const heritageSections = [
     title: "Bridges & Corners",
     description:
       "The bridges, corners, and edges that define Grand Forks — where infrastructure meets history, and everyday structures carry generations of stories.",
-    imageUrl: "/historic-bridge-corner-detail.jpg",
+    imageUrl: "/historic-bridge-corner-detail.jpeg",
     href: "/grand-forks-heritage/bridges-and-corners",
   },
 ]

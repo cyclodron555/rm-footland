@@ -6,7 +6,7 @@ const heritageBuildings = [
     name: "Coming Soon — Downtown Details",
     location: "",
     yearBuilt: "",
-    images: ["/historic-downtown-storefront.jpg"],
+    images: ["/historic-downtown-storefront.jpeg"],
     description:
       "We'll be documenting the historic storefronts and architectural details of downtown Grand Forks, capturing the character of the main street and its enduring structures.",
   },
@@ -15,7 +15,7 @@ const heritageBuildings = [
     name: "Coming Soon — Early Grand Forks",
     location: "",
     yearBuilt: "",
-    images: ["/early-1900s-heritage-building.jpg"],
+    images: ["/early-1900s-heritage-building.jpeg"],
     description:
       "A collection of the earliest remaining buildings in Grand Forks, showcasing the architectural styles and construction methods from the town's founding era.",
   },
@@ -24,7 +24,7 @@ const heritageBuildings = [
     name: "Coming Soon — Bridges & Corners",
     location: "",
     yearBuilt: "",
-    images: ["/historic-bridge-corner-detail.jpg"],
+    images: ["/historic-bridge-corner-detail.jpeg"],
     description:
       "The bridges, corners, and edges that define Grand Forks — where infrastructure meets history, and everyday structures carry generations of stories.",
   },
