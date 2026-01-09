@@ -8,8 +8,7 @@ export function HeritageHero() {
         <p className="text-xl md:text-2xl text-gray-600 font-light">A living digital photo book by Cyclodron</p>
         <p className="text-sm text-gray-500 italic pt-2">Updated over time</p>
         <p className="text-m text-gray-400 italic font-light pt-4 max-w-2xl mx-auto">
-          All images in this project share a consistent tonal interpretation designed to evoke a quiet, heritage
-          atmosphere.
+          All images share a quiet, consistent tonal approach — chosen to reflect the character, age, and atmosphere of these places.
         </p>
       </div>
     </section>
