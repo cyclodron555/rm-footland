@@ -4,8 +4,8 @@ import { Footer } from "@/components/footer"
 import { HeritageHero } from "@/components/heritage-hero"
 import { HeritageIntro } from "@/components/heritage-intro"
 import { HeritageSupport } from "@/components/heritage-support"
-import { HeritageAlbum } from "@/components/heritage-album"
-import { heritageAlbum } from "./data/album"
+import { HeritageSpreadViewer } from "@/components/heritage-spread-viewer"
+import { heritageSpreads } from "./data/spreads"
 
 export const metadata: Metadata = {
   title: "Grand Forks Heritage Buildings — Cyclodron",
@@ -41,7 +41,7 @@ export default function GrandForksHeritagePage() {
       <main className="min-h-screen bg-white">
         <HeritageHero />
         <HeritageIntro />
-        <HeritageAlbum pages={heritageAlbum} />
+        <HeritageSpreadViewer spreads={heritageSpreads} />
         <HeritageSupport />
       </main>
       <Footer />

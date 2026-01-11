@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [projectsOpen, setProjectsOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -72,15 +73,38 @@ export function Navigation() {
                 }`}
               ></span>
             </Link>
-            <Link
-              href="https://patreon.com/Cyclodron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group text-foreground/70 hover:text-foreground"
+            <div
+              className="relative"
+              onMouseEnter={() => setProjectsOpen(true)}
+              onMouseLeave={() => setProjectsOpen(false)}
             >
-              Patreon
-              <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full"></span>
-            </Link>
+              <button
+                className={`text-sm font-semibold uppercase tracking-wider transition-all duration-300 relative group flex items-center gap-1 ${
+                  pathname.startsWith("/grand-forks-heritage")
+                    ? "text-foreground"
+                    : "text-foreground/70 hover:text-foreground"
+                }`}
+              >
+                Projects
+                <ChevronDown size={14} className={`transition-transform ${projectsOpen ? "rotate-180" : ""}`} />
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                    pathname.startsWith("/grand-forks-heritage") ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
+              </button>
+              {projectsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-sm shadow-lg py-2">
+                  <Link
+                    href="/grand-forks-heritage"
+                    className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-secondary/30 transition-colors"
+                  >
+                    Grand Forks — Heritage
+                  </Link>
+                </div>
+              )}
+            </div>
+            {/* </CHANGE> */}
             <Link
               href="https://cyclodron.gumroad.com"
               target="_blank"
@@ -134,15 +158,27 @@ export function Navigation() {
             >
               Contact
             </Link>
-            <Link
-              href="https://patreon.com/Cyclodron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base font-semibold uppercase tracking-wider transition-colors py-2 text-foreground/70 hover:text-foreground"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Patreon
-            </Link>
+            <div>
+              <button
+                onClick={() => setProjectsOpen(!projectsOpen)}
+                className="text-base font-semibold uppercase tracking-wider transition-colors py-2 text-foreground/70 hover:text-foreground flex items-center gap-1 w-full"
+              >
+                Projects
+                <ChevronDown size={14} className={`transition-transform ${projectsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {projectsOpen && (
+                <div className="pl-4 mt-2">
+                  <Link
+                    href="/grand-forks-heritage"
+                    className="block text-sm py-2 text-foreground/60 hover:text-foreground transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Grand Forks — Heritage
+                  </Link>
+                </div>
+              )}
+            </div>
+            {/* </CHANGE> */}
             <Link
               href="https://cyclodron.gumroad.com"
               target="_blank"

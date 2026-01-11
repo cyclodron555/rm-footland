@@ -9,26 +9,26 @@ interface HeritageAlbumProps {
 }
 
 export function HeritageAlbum({ pages }: HeritageAlbumProps) {
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentSpreadIndex, setCurrentSpreadIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
   const totalPages = pages.length
+  const totalSpreads = Math.ceil(totalPages / 2)
 
   const goToPrevious = () => {
     if (isTransitioning) return
     setIsTransitioning(true)
-    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1))
-    setTimeout(() => setIsTransitioning(false), 300)
+    setCurrentSpreadIndex((prev) => (prev === 0 ? totalSpreads - 1 : prev - 1))
+    setTimeout(() => setIsTransitioning(false), 400)
   }
 
   const goToNext = () => {
     if (isTransitioning) return
     setIsTransitioning(true)
-    setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1))
-    setTimeout(() => setIsTransitioning(false), 300)
+    setCurrentSpreadIndex((prev) => (prev === totalSpreads - 1 ? 0 : prev + 1))
+    setTimeout(() => setIsTransitioning(false), 400)
   }
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") goToPrevious()
@@ -49,55 +49,87 @@ export function HeritageAlbum({ pages }: HeritageAlbumProps) {
     )
   }
 
-  const currentPageData = pages[currentPage]
-  const isSingleImage = currentPageData.images.length === 1
+  const leftPageIndex = currentSpreadIndex * 2
+  const rightPageIndex = leftPageIndex + 1
+  const leftPage = pages[leftPageIndex]
+  const rightPage = rightPageIndex < totalPages ? pages[rightPageIndex] : null
 
-  return (
-    <section className="w-full bg-gray-50 py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative w-full min-h-[600px] md:min-h-[700px] bg-white shadow-2xl rounded-sm">
-          {/* Horizontal and vertical margins for book-like feel */}
-          <div
-            className={`px-8 md:px-16 lg:px-24 py-12 md:py-16 h-full transition-opacity duration-300 ${
-              isTransitioning ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            {isSingleImage ? (
-              // Single image layout
-              <div className="relative w-full h-full min-h-[550px] md:min-h-[650px] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+  const renderPage = (pageData: AlbumPage, pageNumber: number, side: "left" | "right") => {
+    const isSingleImage = pageData.images.length === 1
+
+    return (
+      <div className="relative flex-1 bg-white h-full flex flex-col">
+        {/* Page content with margins */}
+        <div className="flex-1 px-8 md:px-12 py-12 md:py-16">
+          {isSingleImage ? (
+            <div className="relative w-full h-full shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+              <Image
+                src={pageData.images[0].src || "/placeholder.svg"}
+                alt={`Heritage photo - page ${pageNumber}`}
+                fill
+                sizes="(max-width: 768px) 90vw, 45vw"
+                className="object-contain"
+                priority={currentSpreadIndex === 0}
+              />
+            </div>
+          ) : (
+            <div className="flex flex-col gap-6 h-full">
+              <div className="relative flex-1 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
                 <Image
-                  src={currentPageData.images[0].src || "/placeholder.svg"}
-                  alt={`Heritage photo - page ${currentPage + 1}`}
+                  src={pageData.images[0].src || "/placeholder.svg"}
+                  alt={`Heritage photo - page ${pageNumber}, image 1`}
                   fill
-                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px"
+                  sizes="(max-width: 768px) 90vw, 45vw"
                   className="object-contain"
-                  priority={currentPage === 0}
+                  priority={currentSpreadIndex === 0}
                 />
               </div>
-            ) : (
-              // Two vertical images stacked
-              <div className="flex flex-col gap-8 h-full">
-                <div className="relative flex-1 min-h-[250px] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                  <Image
-                    src={currentPageData.images[0].src || "/placeholder.svg"}
-                    alt={`Heritage photo - page ${currentPage + 1}, image 1`}
-                    fill
-                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px"
-                    className="object-contain"
-                    priority={currentPage === 0}
-                  />
-                </div>
-                <div className="relative flex-1 min-h-[250px] shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                  <Image
-                    src={currentPageData.images[1].src || "/placeholder.svg"}
-                    alt={`Heritage photo - page ${currentPage + 1}, image 2`}
-                    fill
-                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px"
-                    className="object-contain"
-                  />
-                </div>
+              <div className="relative flex-1 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+                <Image
+                  src={pageData.images[1].src || "/placeholder.svg"}
+                  alt={`Heritage photo - page ${pageNumber}, image 2`}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 45vw"
+                  className="object-contain"
+                  priority={currentSpreadIndex === 0}
+                />
               </div>
-            )}
+            </div>
+          )}
+        </div>
+
+        {/* Page number at bottom */}
+        <div className="pb-6 text-center">
+          <span className="text-sm text-gray-500 font-serif">{pageNumber}</span>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <section className="w-full bg-gray-100 py-12 px-4 md:px-6">
+      <div className="max-w-[1400px] mx-auto">
+        <div
+          className={`relative w-full bg-white shadow-2xl transition-opacity duration-400 ${
+            isTransitioning ? "opacity-0" : "opacity-100"
+          }`}
+          style={{ minHeight: "700px" }}
+        >
+          {/* Mobile: single page view */}
+          <div className="md:hidden">{renderPage(leftPage, leftPageIndex + 1, "left")}</div>
+
+          {/* Desktop: two-page spread */}
+          <div className="hidden md:flex relative">
+            {/* Left page */}
+            {renderPage(leftPage, leftPageIndex + 1, "left")}
+
+            {/* Center binding/gutter shadow */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-8 -translate-x-1/2 pointer-events-none">
+              <div className="h-full w-full bg-gradient-to-r from-transparent via-gray-400/20 to-transparent shadow-[inset_0_0_12px_rgba(0,0,0,0.15)]" />
+            </div>
+
+            {/* Right page or blank */}
+            {rightPage ? renderPage(rightPage, rightPageIndex + 1, "right") : <div className="flex-1 bg-white" />}
           </div>
         </div>
 
@@ -107,7 +139,7 @@ export function HeritageAlbum({ pages }: HeritageAlbumProps) {
             onClick={goToPrevious}
             disabled={isTransitioning}
             className="flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            aria-label="Previous page"
+            aria-label="Previous spread"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +159,8 @@ export function HeritageAlbum({ pages }: HeritageAlbumProps) {
 
           <div className="text-center">
             <p className="text-sm text-gray-600 font-medium">
-              Page {currentPage + 1} of {totalPages}
+              Pages {leftPageIndex + 1}
+              {rightPage ? `–${rightPageIndex + 1}` : ""} of {totalPages}
             </p>
           </div>
 
@@ -135,7 +168,7 @@ export function HeritageAlbum({ pages }: HeritageAlbumProps) {
             onClick={goToNext}
             disabled={isTransitioning}
             className="flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            aria-label="Next page"
+            aria-label="Next spread"
           >
             <span className="hidden sm:inline">Next</span>
             <svg
@@ -152,26 +185,6 @@ export function HeritageAlbum({ pages }: HeritageAlbumProps) {
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
-        </div>
-
-        {/* Page Dots Indicator (optional, for visual feedback) */}
-        <div className="flex justify-center gap-2 mt-6">
-          {pages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (!isTransitioning) {
-                  setIsTransitioning(true)
-                  setCurrentPage(index)
-                  setTimeout(() => setIsTransitioning(false), 300)
-                }
-              }}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentPage ? "bg-gray-900 w-8" : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to page ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>

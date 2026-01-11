@@ -15,7 +15,6 @@ export function Footer() {
               Quiet photography and ambient filmmaking. Exploring real places, real light, and the beauty that exists
               without interruption.
             </p>
-            {/* </CHANGE> */}
             <div className="flex gap-5">
               <a
                 href="https://www.instagram.com/cyclodron/"
@@ -75,15 +74,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://patreon.com/Cyclodron"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/grand-forks-heritage"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Patreon
-                </a>
+                  Grand Forks — Heritage
+                </Link>
               </li>
+              {/* </CHANGE> */}
             </ul>
           </div>
         </div>
