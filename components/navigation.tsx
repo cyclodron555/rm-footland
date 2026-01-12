@@ -94,7 +94,7 @@ export function Navigation() {
                 ></span>
               </button>
               {projectsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-sm shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-0 w-56 bg-background border border-border rounded-sm shadow-lg py-2">
                   <Link
                     href="/grand-forks-heritage"
                     className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-secondary/30 transition-colors"
