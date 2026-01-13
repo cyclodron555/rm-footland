@@ -46,10 +46,10 @@ export function HeritageIntro() {
             I’m sorry. I focused mostly on structures that feel early-1900s (give or take), and I’m sure I missed
             places that matter.
           </p>
-          <p>
+          {/* <p>
             If you have a heritage home — or one that truly carries that older character — feel free to message me.
             If you send a photo, or if a friend can capture it for you, I’ll happily consider adding it to the album over time.
-          </p>
+          </p> */}
         </div>
 
       </div>
