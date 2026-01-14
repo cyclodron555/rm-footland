@@ -7,9 +7,11 @@ export function HeritageSupport() {
         <h2 className="font-serif text-3xl md:text-4xl text-gray-900">Support This Project</h2>
 
         <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-          This is a complete photo book, available as a free downloadable ZIP containing both the cover and full book
-          PDFs. Print them if you choose, or keep them as a digital archive. Your support helps me continue documenting
-          Grand Forks, quietly and independently.
+          This is a complete photographic book documenting many of Grand Forks’ heritage buildings and older corners.
+
+You can explore it here as a digital book, or download the full, print-ready edition for free. The download includes both the cover and the complete interior PDF, prepared for anyone who wishes to archive or print it.
+
+For the intended book-like experience, viewing the album on a desktop or laptop is recommended.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
