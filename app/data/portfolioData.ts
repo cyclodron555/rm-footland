@@ -5,6 +5,7 @@ export interface PortfolioItem {
   title: string
   description: string
   alt: string
+  orientation?: "landscape" | "portrait" // Optional: detected at runtime if not specified
 }
 
 export const portfolioData: PortfolioItem[] = [
@@ -295,6 +296,38 @@ export const portfolioData: PortfolioItem[] = [
     title: "Winter River Grand Forks",
     description: "Serene winter river scene in Grand Forks with snow-covered banks and calm waters",
     alt: "Peaceful winter river in Grand Forks with snow-covered shores and tranquil atmosphere",
+  },
+  {
+    id: "landscape-44",
+    category: "landscape",
+    src: "/images/GumRoad-.jpeg",
+    title: "Quiet Moment",
+    description: "A serene landscape capturing the peaceful essence of the natural world",
+    alt: "Tranquil landscape scene with natural beauty and soft light",
+  },
+  {
+    id: "landscape-45",
+    category: "landscape",
+    src: "/images/GumRoad-5587.jpeg",
+    title: "Mountain Serenity",
+    description: "Majestic mountain scenery with dramatic lighting and atmospheric depth",
+    alt: "Mountain landscape with dramatic lighting and natural atmosphere",
+  },
+  {
+    id: "landscape-46",
+    category: "landscape",
+    src: "/images/GumRoad-9662.jpeg",
+    title: "Natural Elegance",
+    description: "Elegant composition showcasing the beauty of untouched wilderness",
+    alt: "Beautiful wilderness scene with natural lighting and elegant composition",
+  },
+  {
+    id: "landscape-47",
+    category: "landscape",
+    src: "/images/GumRoad-9845ChristinaLake.jpeg",
+    title: "Christina Lake Vista",
+    description: "Stunning view of Christina Lake with pristine waters and surrounding landscape",
+    alt: "Beautiful Christina Lake scene with clear waters and scenic surroundings",
   },
 
   // Cityscape

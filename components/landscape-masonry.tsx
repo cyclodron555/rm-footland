@@ -2,34 +2,95 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
-import { portfolioData } from "@/app/data/portfolioData"
+import { portfolioData, type PortfolioItem } from "@/app/data/portfolioData"
 import { ImageLightbox } from "@/components/image-lightbox"
 
-function interleaveByOrientation(photos: typeof portfolioData) {
-  // Create a shuffled copy to start with randomness
-  const shuffled = [...photos].sort(() => Math.random() - 0.5)
+interface PhotoWithOrientation extends PortfolioItem {
+  detectedOrientation: "landscape" | "portrait"
+  aspectRatio: number
+}
 
-  // Classify images by rough aspect ratio categories
-  // This creates a more organic mix without heavy orientation clustering
-  const result = []
-  const wide = [] // panoramic/landscape
-  const square = [] // roughly square
-  const tall = [] // portrait orientation
+// Detect orientation from actual image dimensions
+function detectOrientationSync(src: string): Promise<{ orientation: "landscape" | "portrait"; aspectRatio: number }> {
+  return new Promise((resolve) => {
+    const img = new window.Image()
+    img.onload = () => {
+      const aspectRatio = img.width / img.height
+      const orientation = img.height > img.width ? "portrait" : "landscape"
+      resolve({ orientation, aspectRatio })
+    }
+    img.onerror = () => {
+      resolve({ orientation: "landscape", aspectRatio: 1.5 })
+    }
+    img.src = src
+  })
+}
 
-  // Distribute into orientation buckets (we'll interleave these)
-  for (const photo of shuffled) {
-    const ratio = Math.random() // Since we don't have dimensions, we'll distribute evenly
-    if (ratio < 0.4) wide.push(photo)
-    else if (ratio < 0.7) square.push(photo)
-    else tall.push(photo)
-  }
+// Balance photos to prevent same-orientation clusters (max 2 in a row)
+function balanceOrientations(photos: PhotoWithOrientation[]): PhotoWithOrientation[] {
+  const landscapes = photos.filter((p) => p.detectedOrientation === "landscape")
+  const portraits = photos.filter((p) => p.detectedOrientation === "portrait")
 
-  // Interleave orientations to create natural, balanced flow
-  const maxLength = Math.max(wide.length, square.length, tall.length)
-  for (let i = 0; i < maxLength; i++) {
-    if (square[i]) result.push(square[i])
-    if (wide[i]) result.push(wide[i])
-    if (tall[i]) result.push(tall[i])
+  // Shuffle each pool
+  landscapes.sort(() => Math.random() - 0.5)
+  portraits.sort(() => Math.random() - 0.5)
+
+  const result: PhotoWithOrientation[] = []
+  let consecutiveLandscape = 0
+  let consecutivePortrait = 0
+  let landscapeIndex = 0
+  let portraitIndex = 0
+
+  // Target ratio: 60% landscape, 40% portrait
+  const targetLandscapeRatio = 0.6
+
+  while (landscapeIndex < landscapes.length || portraitIndex < portraits.length) {
+    const hasLandscape = landscapeIndex < landscapes.length
+    const hasPortrait = portraitIndex < portraits.length
+
+    let needLandscape = false
+    let needPortrait = false
+
+    // If we have 2 consecutive of one type, we MUST switch
+    if (consecutiveLandscape >= 2 && hasPortrait) {
+      needPortrait = true
+    } else if (consecutivePortrait >= 2 && hasLandscape) {
+      needLandscape = true
+    } else {
+      const currentLandscapeRatio = result.length > 0
+        ? result.filter((p) => p.detectedOrientation === "landscape").length / result.length
+        : 0.5
+
+      if (currentLandscapeRatio < targetLandscapeRatio && hasLandscape) {
+        needLandscape = true
+      } else if (hasPortrait) {
+        needPortrait = true
+      } else if (hasLandscape) {
+        needLandscape = true
+      }
+    }
+
+    if (needPortrait && hasPortrait) {
+      result.push(portraits[portraitIndex])
+      portraitIndex++
+      consecutivePortrait++
+      consecutiveLandscape = 0
+    } else if (needLandscape && hasLandscape) {
+      result.push(landscapes[landscapeIndex])
+      landscapeIndex++
+      consecutiveLandscape++
+      consecutivePortrait = 0
+    } else if (hasLandscape) {
+      result.push(landscapes[landscapeIndex])
+      landscapeIndex++
+      consecutiveLandscape++
+      consecutivePortrait = 0
+    } else if (hasPortrait) {
+      result.push(portraits[portraitIndex])
+      portraitIndex++
+      consecutivePortrait++
+      consecutiveLandscape = 0
+    }
   }
 
   return result
@@ -38,11 +99,11 @@ function interleaveByOrientation(photos: typeof portfolioData) {
 export function LandscapeMasonry() {
   const allPhotos = portfolioData.filter((item) => item.category === "landscape" || item.category === "cityscape")
 
-  const [mixedPhotos] = useState(() => interleaveByOrientation(allPhotos))
-
-  const [visibleImages, setVisibleImages] = useState<typeof allPhotos>([])
+  const [balancedPhotos, setBalancedPhotos] = useState<PhotoWithOrientation[]>([])
+  const [visibleImages, setVisibleImages] = useState<PhotoWithOrientation[]>([])
   const [hasMore, setHasMore] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
+  const [isInitializing, setIsInitializing] = useState(true)
   const observerTarget = useRef<HTMLDivElement>(null)
 
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -51,21 +112,38 @@ export function LandscapeMasonry() {
 
   const BATCH_SIZE = 12
 
-  // Initial load
+  // Detect orientations and balance on mount
   useEffect(() => {
-    setVisibleImages(mixedPhotos.slice(0, BATCH_SIZE))
-  }, [mixedPhotos])
+    async function initializePhotos() {
+      const photosWithOrientation = await Promise.all(
+        allPhotos.map(async (photo) => {
+          const { orientation, aspectRatio } = await detectOrientationSync(photo.src)
+          return {
+            ...photo,
+            detectedOrientation: orientation,
+            aspectRatio,
+          }
+        })
+      )
+
+      const balanced = balanceOrientations(photosWithOrientation)
+      setBalancedPhotos(balanced)
+      setVisibleImages(balanced.slice(0, BATCH_SIZE))
+      setIsInitializing(false)
+    }
+
+    initializePhotos()
+  }, [])
 
   // Load more images
   const loadMore = useCallback(() => {
-    if (isLoading || !hasMore) return
+    if (isLoading || !hasMore || isInitializing) return
 
     setIsLoading(true)
 
-    // Simulate slight delay for smooth UX
     setTimeout(() => {
       const currentLength = visibleImages.length
-      const nextBatch = mixedPhotos.slice(currentLength, currentLength + BATCH_SIZE)
+      const nextBatch = balancedPhotos.slice(currentLength, currentLength + BATCH_SIZE)
 
       if (nextBatch.length === 0) {
         setHasMore(false)
@@ -75,13 +153,13 @@ export function LandscapeMasonry() {
 
       setIsLoading(false)
     }, 300)
-  }, [visibleImages.length, hasMore, isLoading, mixedPhotos])
+  }, [visibleImages.length, hasMore, isLoading, balancedPhotos, isInitializing])
 
   // Intersection observer for infinite scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && hasMore && !isLoading) {
+        if (entries[0].isIntersecting && hasMore && !isLoading && !isInitializing) {
           loadMore()
         }
       },
@@ -98,7 +176,7 @@ export function LandscapeMasonry() {
         observer.unobserve(currentTarget)
       }
     }
-  }, [loadMore, hasMore, isLoading])
+  }, [loadMore, hasMore, isLoading, isInitializing])
 
   const handleImageClick = (index: number) => {
     scrollPositionRef.current = window.scrollY
@@ -108,7 +186,6 @@ export function LandscapeMasonry() {
 
   const handleCloseLightbox = () => {
     setLightboxOpen(false)
-    // Restore scroll position after lightbox closes
     setTimeout(() => {
       window.scrollTo(0, scrollPositionRef.current)
     }, 0)
@@ -120,6 +197,14 @@ export function LandscapeMasonry() {
 
   const handlePrevious = () => {
     setLightboxIndex((prev) => (prev - 1 + visibleImages.length) % visibleImages.length)
+  }
+
+  if (isInitializing) {
+    return (
+      <div className="w-full py-20 flex justify-center">
+        <div className="text-muted-foreground text-sm">Loading gallery...</div>
+      </div>
+    )
   }
 
   return (
@@ -144,17 +229,23 @@ export function LandscapeMasonry() {
             }}
           >
             <div
-              className="relative group overflow-hidden bg-black/20 cursor-pointer"
+              className="relative group overflow-hidden cursor-pointer"
+              style={{
+                // Reserve space based on detected aspect ratio to prevent reflow
+                aspectRatio: photo.aspectRatio,
+                backgroundColor: "rgba(0,0,0,0.2)",
+              }}
               onClick={() => handleImageClick(index)}
             >
               <Image
                 src={photo.src || "/placeholder.svg"}
                 alt={photo.alt}
-                width={1200}
-                height={800}
+                fill
                 quality={90}
                 loading={index < BATCH_SIZE ? "eager" : "lazy"}
-                className="w-full h-auto block transition-transform duration-700 group-hover:scale-105 animate-fade-in"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAQMDBAMBAAAAAAAAAAAAAQIDBAAFEQYSITETQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/AN0stws0e0W+PIuEJp9mIw26hb6AVJCAA4SfYP5SlKqTkAdTuf/Z"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-4">
