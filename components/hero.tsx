@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-3xl">
           <p className="text-lg md:text-xl font-bold text-primary mb-3 drop-shadow-md tracking-wider">
-            Join us and
+            JOIN US AND
           </p>
           <h1 className="text-5xl md:text-7xl font-black mb-4 drop-shadow-lg">
             <span className="text-secondary">PLAY THE </span>
