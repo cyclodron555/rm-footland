@@ -1,46 +1,19 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { SchemaMarkup } from "@/components/schema-markup"
-import { MoodProvider } from "@/components/mood-provider"
-import "./globals.css"
-
-// Updated fonts for premium photography aesthetic
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-})
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata, Viewport } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Cyclodron Photography | Cinematic Landscape & Candid Visuals",
-  description:
-    "Exploring the world through cinematic landscapes and authentic candid photography. Visual storytelling that brings emotion, atmosphere, and depth to every frame.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+  title: 'Real Madrid Foundation Clinics Azerbaijan',
+  description: 'Experience the Real Way at Real Madrid Foundation Clinics in Azerbaijan. Youth football clinics for players ages 5-17.',
+  generator: 'v0.app',
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
 }
 
 export default function RootLayout({
@@ -49,13 +22,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <SchemaMarkup />
-      </head>
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        <MoodProvider>{children}</MoodProvider>
-        <Analytics />
+    <html lang="en" className="light">
+      <body className="antialiased bg-background text-foreground">
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )

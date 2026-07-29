@@ -1,21 +1,22 @@
-"use client"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { LandscapeMasonry } from "@/components/landscape-masonry"
+import Header from '@/components/header'
+import Hero from '@/components/hero'
+import About from '@/components/about'
+import UpcomingClinics from '@/components/upcoming-clinics'
+import TrainingTechnique from '@/components/training-technique'
+import PastClinics from '@/components/past-clinics'
+import Methodology from '@/components/methodology'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <div className="pt-16">
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
-            Landscape photographer & ambient filmmaker.
-          </h1>
-          <p className="text-xl md:text-2xl text-white italic font-light">Quiet places, captured slowly.</p>
-        </div>
-        <LandscapeMasonry />
-      </div>
+    <main className="min-h-screen bg-background">
+      <Header />
+      <Hero />
+      <About />
+      <UpcomingClinics />
+      <TrainingTechnique />
+      <PastClinics />
+      <Methodology />
       <Footer />
     </main>
   )
