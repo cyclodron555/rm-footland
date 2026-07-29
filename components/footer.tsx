@@ -66,10 +66,10 @@ export default function Footer() {
               Stay updated on our latest clinics and events
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+              <a href="https://facebook.com/footland.az" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
                 <span className="text-xs font-bold">f</span>
               </a>
-              <a href="#" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+              <a href="https://instagram.com/footland.az" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
                 <span className="text-xs font-bold">ig</span>
               </a>
             </div>
