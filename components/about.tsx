@@ -20,7 +20,7 @@ export default function About() {
               Each full day clinic experience provides participants with the unique opportunity to &apos;Play The Real Way&apos; experiencing the Real Madrid Foundation Methodology. Led by experienced coaches from the Real Madrid Foundation, our clinics combine team training with the core values of the Foundation: leadership, teamwork, effort, solidarity, cooperation, and respect.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Participants ages <span className="font-bold">5 to 17 years old</span> are eager to experience a great adventure while passionately enjoying their favorite sport.
+              Participants ages <span className="font-bold">6 to 16 years old</span> are eager to experience a great adventure while passionately enjoying their favorite sport.
             </p>
           </div>
 
