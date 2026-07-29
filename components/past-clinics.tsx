@@ -4,42 +4,42 @@ export default function PastClinics() {
   const pastClinics = [
     {
       id: 1,
-      clinic: 'Spring Clinic 2026',
-      date: 'April 20-24, 2026',
-      location: 'Baku Sports Academy',
-      participants: 128,
-      ageRange: '5-17 years',
-      coaches: 8,
+      clinic: 'Summer Clinic 2026',
+      date: 'June 22-26, 2026',
+      location: 'SABIS SUN International',
+      participants: 280,
+      ageRange: '6-16 years',
+      coaches: 4,
       status: 'Completed'
     },
     {
       id: 2,
-      clinic: 'Winter Clinic 2025',
-      date: 'December 27-31, 2025',
-      location: 'Ganja Football Complex',
-      participants: 95,
-      ageRange: '6-15 years',
-      coaches: 6,
+      clinic: 'Summer Clinic 2025',
+      date: 'June 23-27, 2025',
+      location: 'SABIS SUN International',
+      participants: 250,
+      ageRange: '6-16 years',
+      coaches: 3,
       status: 'Completed'
     },
     {
       id: 3,
-      clinic: 'Fall Clinic 2025',
-      date: 'October 6-10, 2025',
-      location: 'Baku Sports Academy',
-      participants: 112,
-      ageRange: '5-17 years',
-      coaches: 7,
+      clinic: 'Summer Clinic 2024',
+      date: 'June 24-28, 2024',
+      location: 'SABIS SUN International',
+      participants: 150,
+      ageRange: '6-16 years',
+      coaches: 2,
       status: 'Completed'
     },
     {
       id: 4,
-      clinic: 'Summer Clinic 2025',
-      date: 'August 11-15, 2025',
-      location: 'Baku Sports Academy',
-      participants: 156,
-      ageRange: '5-17 years',
-      coaches: 10,
+      clinic: 'Summer Clinic 2023',
+      date: 'August 21-25, 2023',
+      location: 'SABIS SUN International',
+      participants: 150,
+      ageRange: '6-16 years',
+      coaches: 2,
       status: 'Completed'
     },
   ]
@@ -116,11 +116,11 @@ export default function PastClinics() {
           </div>
           <div className="bg-primary/10 rounded-lg p-8 text-center border border-primary/20">
             <p className="text-primary font-bold text-sm uppercase mb-2">Total Participants</p>
-            <p className="text-5xl font-black text-foreground">491</p>
+            <p className="text-5xl font-black text-foreground">830</p>
           </div>
           <div className="bg-primary/10 rounded-lg p-8 text-center border border-primary/20">
             <p className="text-primary font-bold text-sm uppercase mb-2">Expert Coaches</p>
-            <p className="text-5xl font-black text-foreground">31</p>
+            <p className="text-5xl font-black text-foreground">11</p>
           </div>
         </div>
       </div>
