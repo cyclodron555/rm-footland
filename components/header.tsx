@@ -33,7 +33,7 @@ export default function Header() {
             <img 
               src="/footland-logo.png" 
               alt="Footland Logo" 
-              className="h-9"
+              className="h-10"
             />
           </div>
         </div>
