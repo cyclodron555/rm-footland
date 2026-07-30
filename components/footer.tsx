@@ -9,12 +9,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="text-primary font-bold text-lg">RM</div>
-              <div>
-                <h3 className="font-bold">Clinic</h3>
-                <p className="text-sm text-white/70">Azerbaijan</p>
-              </div>
+            <div className="mb-4">
+              <img 
+                src="/logo.png" 
+                alt="Real Madrid Foundation Clinic Azerbaijan Logo" 
+                className="h-20"
+              />
             </div>
             <p className="text-white/70 text-sm">
               Real Madrid Foundation Clinics - Your effort, their future
