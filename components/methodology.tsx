@@ -80,16 +80,16 @@ export default function Methodology() {
           <div className="flex items-center justify-center gap-16 flex-wrap">
             <div className="flex-shrink-0">
               <img 
-                src="/sponsor-abb.png" 
-                alt="ABB Azerbaycan Beynelxalq Bankı" 
-                className="h-24 object-contain"
+                src="/sponsor-visa.png" 
+                alt="VISA" 
+                className="h-16 object-contain"
               />
             </div>
             <div className="flex-shrink-0">
               <img 
-                src="/sponsor-visa.png" 
-                alt="VISA" 
-                className="h-16 object-contain"
+                src="/sponsor-abb.png" 
+                alt="ABB Azerbaycan Beynelxalq Bankı" 
+                className="h-24 object-contain"
               />
             </div>
           </div>
