@@ -15,16 +15,19 @@ export default function Header() {
             />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#about" className="text-foreground hover:text-primary transition-colors">
+            <Link href="#about" className="text-sm text-foreground hover:text-primary transition-colors">
               About
             </Link>
-            <Link href="#upcoming" className="text-foreground hover:text-primary transition-colors">
+            <Link href="#upcoming" className="text-sm text-foreground hover:text-primary transition-colors">
               Upcoming
             </Link>
-            <Link href="#history" className="text-foreground hover:text-primary transition-colors">
+            <Link href="#history" className="text-sm text-foreground hover:text-primary transition-colors">
               History
             </Link>
-            <Link href="#methodology" className="text-foreground hover:text-primary transition-colors">
+            <Link href="#madrid-experience" className="text-sm text-foreground hover:text-primary transition-colors">
+              Madrid Experience
+            </Link>
+            <Link href="#methodology" className="text-sm text-foreground hover:text-primary transition-colors">
               The Real Way
             </Link>
           </nav>

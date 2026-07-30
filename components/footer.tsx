@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/70 text-sm">
-              Real Madrid Foundation Clinics - Your effort, their future
+              Real Madrid Foundation CLINICS Powered by Footland
             </p>
           </div>
 
@@ -38,6 +38,11 @@ export default function Footer() {
               <li>
                 <Link href="#history" className="hover:text-white transition-colors">
                   Past Clinics
+                </Link>
+              </li>
+              <li>
+                <Link href="#madrid-experience" className="hover:text-white transition-colors">
+                  Madrid Experience
                 </Link>
               </li>
               <li>
