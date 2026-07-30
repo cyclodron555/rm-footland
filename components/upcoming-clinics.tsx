@@ -2,8 +2,8 @@
 
 export default function UpcomingClinics() {
   const upcomingClinic = {
-    name: 'Summer Clinic 2027',
-    date: 'August 10-14, 2027',
+    name: 'Summer 2027',
+    date: 'June 21-25, 2027',
     location: 'SABIS SUN International',
     ageGroups: '6-16 years',
     description: 'Training experience with Real Madrid Foundation coaches'
