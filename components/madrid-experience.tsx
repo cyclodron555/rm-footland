@@ -92,19 +92,19 @@ export default function MadridExperience() {
             </p>
             <div className="pt-4">
               <div className="space-y-3">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-1">
                   <span className="text-primary text-2xl font-bold">✓</span>
                   <p className="text-foreground">900+ Young Players from Around the World</p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-1">
                   <span className="text-primary text-2xl font-bold">✓</span>
                   <p className="text-foreground">85+ International Teams Competing</p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-1">
                   <span className="text-primary text-2xl font-bold">✓</span>
                   <p className="text-foreground">Real Madrid Training Facilities Experience</p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-1">
                   <span className="text-primary text-2xl font-bold">✓</span>
                   <p className="text-foreground">Building Global Friendships & Values</p>
                 </div>
