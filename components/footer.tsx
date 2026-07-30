@@ -41,6 +41,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#madrid-experience" className="hover:text-white transition-colors">
+                  Madrid Experience
+                </Link>
+              </li>
+              <li>
                 <Link href="#methodology" className="hover:text-white transition-colors">
                   The Real Way
                 </Link>
