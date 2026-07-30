@@ -64,13 +64,35 @@ export default function Methodology() {
           ))}
         </div>
 
-        <div className="bg-secondary text-white rounded-lg p-12 text-center">
+        <div className="bg-secondary text-white rounded-lg p-12 text-center mb-16">
           <h3 className="text-3xl font-black mb-4">
             Objectives
           </h3>
           <p className="text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             The most important objective is to introduce children to the values of the Real Madrid Foundation: leadership, teamwork, effort, solidarity, cooperation, and respect. Through football, we help young players discover their potential and become better individuals both on and off the pitch.
           </p>
+        </div>
+
+        <div className="text-center">
+          <h3 className="text-3xl font-black text-foreground mb-12">
+            Our <span className="text-primary">Partners</span> and Sponsors
+          </h3>
+          <div className="flex items-center justify-center gap-16 flex-wrap">
+            <div className="flex-shrink-0">
+              <img 
+                src="/sponsor-visa.png" 
+                alt="VISA" 
+                className="h-16 object-contain"
+              />
+            </div>
+            <div className="flex-shrink-0">
+              <img 
+                src="/sponsor-abb.png" 
+                alt="ABB Azerbaycan Beynelxalq Bankı" 
+                className="h-24 object-contain"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
