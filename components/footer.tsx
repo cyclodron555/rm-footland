@@ -52,10 +52,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4 text-primary">Contact</h4>
             <p className="text-white/70 text-sm mb-2">
-              Email: <span className="text-white">clinics@realmadrid.az</span>
-            </p>
-            <p className="text-white/70 text-sm">
-              Phone: <span className="text-white">+994 (12) XXX-XXXX</span>
+              Email: <span className="text-white">info@footland.az</span>
             </p>
           </div>
 
@@ -78,7 +75,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8">
           <p className="text-white/70 text-sm text-center">
-            © 2026 Real Madrid Foundation. All rights reserved. | 
+            © 2026 Real Madrid Foundation Azerbaijan. All rights reserved. | 
             <Link href="#" className="hover:text-white ml-2">Privacy Policy</Link> | 
             <Link href="#" className="hover:text-white ml-2">Terms of Service</Link>
           </p>
