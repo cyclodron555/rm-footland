@@ -5,13 +5,12 @@ import { useState } from 'react'
 export default function MadridExperience() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // Placeholder images - user will provide actual photos
   const slides = [
-    { id: 1, title: 'World Challenge Tournament', description: 'Young players from around the world competing' },
-    { id: 2, title: 'Global Competition', description: 'U10-U14 players demonstrating Real Madrid methodology' },
-    { id: 3, title: 'Madrid Stadium Experience', description: 'Playing at Real Madrid training facilities' },
-    { id: 4, title: 'International Teams', description: 'Over 40 teams and 450 players participating' },
-    { id: 5, title: 'Values & Coexistence', description: 'Building friendships and learning together' },
+    { id: 1, title: 'Podium Glory', description: 'Azerbaijan teams celebrating their achievement', image: '/madrid-exp-1.jpg' },
+    { id: 2, title: 'Real Madrid Facilities', description: 'Training at the iconic Ciudad Real Madrid', image: '/madrid-exp-2.jpg' },
+    { id: 3, title: 'National Pride', description: 'Representing Azerbaijan on the world stage', image: '/madrid-exp-3.jpg' },
+    { id: 4, title: 'Tournament Champions', description: 'Young champions with their hard-earned medals', image: '/madrid-exp-4.jpg' },
+    { id: 5, title: 'International Experience', description: 'U12 Azerbaijan team competing globally', image: '/madrid-exp-5.jpg' },
   ]
 
   const nextSlide = () => {
@@ -38,13 +37,14 @@ export default function MadridExperience() {
           {/* Photo Slider */}
           <div className="relative">
             <div className="relative bg-secondary rounded-lg overflow-hidden shadow-lg h-96">
-              <div className="w-full h-full bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-4">📸</div>
-                  <p className="text-lg font-semibold mb-2">{slides[currentSlide].title}</p>
-                  <p className="text-sm text-white/70">{slides[currentSlide].description}</p>
-                  <p className="text-xs text-white/50 mt-4">Photo {currentSlide + 1} of {slides.length}</p>
-                </div>
+              <img 
+                src={slides[currentSlide].image} 
+                alt={slides[currentSlide].title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                <p className="text-lg font-semibold text-white mb-2">{slides[currentSlide].title}</p>
+                <p className="text-sm text-white/80">{slides[currentSlide].description}</p>
               </div>
             </div>
 
