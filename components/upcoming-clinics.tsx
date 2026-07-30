@@ -2,11 +2,11 @@
 
 export default function UpcomingClinics() {
   const upcomingClinic = {
-    name: 'Summer Clinic 2026',
-    date: 'August 10-14, 2026',
-    location: 'Baku Sports Academy',
-    ageGroups: '5-17 years',
-    description: 'Full-day training experience with Real Madrid coaches'
+    name: 'Summer 2027',
+    date: 'June 21-25, 2027',
+    location: 'SABIS SUN International',
+    ageGroups: '6-16 years',
+    description: 'Training experience with Real Madrid Foundation coaches'
   }
 
   return (
@@ -24,8 +24,8 @@ export default function UpcomingClinics() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-gradient-to-br from-secondary to-secondary/80 rounded-xl p-12 text-white shadow-lg">
             <div className="text-center">
-              <p className="text-primary/20 font-bold text-sm tracking-widest uppercase mb-4">
-                Save the Date
+              <p className="text-primary font-bold text-sm tracking-widest uppercase mb-4">
+                Real Madrid Foundation Clinics
               </p>
               <h3 className="text-4xl font-black mb-3">
                 {upcomingClinic.name}
