@@ -2,8 +2,8 @@
 
 export default function UpcomingClinics() {
   const upcomingClinic = {
-    name: 'Summer Clinic 2026',
-    date: 'August 10-14, 2026',
+    name: 'Summer Clinic 2027',
+    date: 'August 10-14, 2027',
     location: 'Baku Sports Academy',
     ageGroups: '5-17 years',
     description: 'Full-day training experience with Real Madrid coaches'
