@@ -85,20 +85,20 @@ export default function MadridExperience() {
               Experience the <span className="text-primary">Real Way</span>
             </h3>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              The Real Madrid Foundation Clinics World Challenge is an amazing and exciting tournament that brings over 40 teams and over 450 players U10 to U14 from around the world to demonstrate Real Madrid Foundation methodology.
+              The Real Madrid Foundation Clinics World Challenge is an amazing and exciting tournament that brings over 85 teams and over 900 players U10 to U14 from around the world to demonstrate Real Madrid Foundation methodology.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Players coming from Real Madrid foundation clinics and camps worldwide will be able to live a unique experience of values, football and coexistence in the World Challenge, a tournament held in the Real Madrid training facilities in Madrid, Spain in April.
+              Players coming from Real Madrid foundation clinics and camps worldwide will be able to live a unique experience of values, football and coexistence in the World Challenge, a tournament held in the Real Madrid training facilities in Madrid, Spain in March/April.
             </p>
             <div className="pt-4">
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <span className="text-primary text-2xl font-bold">✓</span>
-                  <p className="text-foreground">450+ Young Players from Around the World</p>
+                  <p className="text-foreground">900+ Young Players from Around the World</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-primary text-2xl font-bold">✓</span>
-                  <p className="text-foreground">40+ International Teams Competing</p>
+                  <p className="text-foreground">85+ International Teams Competing</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-primary text-2xl font-bold">✓</span>
