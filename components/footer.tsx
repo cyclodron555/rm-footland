@@ -93,8 +93,8 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <p className="text-white/70 text-sm text-center">
             © 2026 Real Madrid Foundation Azerbaijan. All rights reserved. | 
-            <Link href="#" className="hover:text-white ml-2">Privacy Policy</Link> | 
-            <Link href="#" className="hover:text-white ml-2">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-white ml-2">Privacy Policy</Link> | 
+            <Link href="/terms-of-service" className="hover:text-white ml-2">Terms of Service</Link>
           </p>
         </div>
       </div>
