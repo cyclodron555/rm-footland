@@ -54,12 +54,24 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-bold mb-4 text-primary">Contact</h4>
-            <p className="text-white/70 text-sm mb-2">
-              Email: <span className="text-white">info@footland.az</span>
-            </p>
-          </div>
+<div>
+  <h4 className="font-bold mb-4 text-primary">Contact</h4>
+
+  <div className="mb-3">
+    <img
+      src="/footland-logo.png"
+      alt="Footland Logo"
+      className="h-10 w-auto"
+    />
+  </div>
+
+  <p className="text-white/70 text-sm mb-2">
+    Email:
+    <span className="text-white">
+      info@footland.az
+    </span>
+  </p>
+</div>
 
           {/* Info */}
           <div>
