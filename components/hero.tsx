@@ -19,8 +19,8 @@ export default function Hero() {
       </div>
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 relative z-10">
-        <div className="max-w-3xl">
+      <div className="absolute inset-0 flex flex-col items-center text-center px-6 relative z-10 pt-24 md:pt-32">
+        <div className="max-w-3xl flex flex-col justify-center">
           <p className="text-base md:text-lg font-bold text-primary mb-6 drop-shadow-lg tracking-widest uppercase">
             JOIN US AND
           </p>
