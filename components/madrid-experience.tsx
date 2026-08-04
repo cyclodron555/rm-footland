@@ -26,7 +26,6 @@ export default function MadridExperience() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-primary font-bold text-sm tracking-widest uppercase mb-4">
-            Madrid Experience
           </p>
           <h2 className="text-4xl font-black text-foreground">
             Real Madrid Foundation World Challenge
