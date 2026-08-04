@@ -26,7 +26,7 @@ export default function MadridExperience() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-primary font-bold text-sm tracking-widest uppercase mb-4">
-            Real Madrid Experience
+            Madrid Experience
           </p>
           <h2 className="text-4xl font-black text-foreground">
             Real Madrid Foundation World Challenge
@@ -85,10 +85,10 @@ export default function MadridExperience() {
               Experience the <span className="text-primary">Real Way</span>
             </h3>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              The Real Madrid Foundation Clinics World Challenge is an amazing and exciting tournament that brings over 85 teams and over 900 players U10 to U14 from around the world to demonstrate Real Madrid Foundation methodology.
+              The Real Madrid Foundation Clinics World Challenge is an amazing and exciting friendly tournament that brings over 85 teams and over 900 players U10 to U14 from around the world to demonstrate Real Madrid Foundation methodology.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Players coming from Real Madrid foundation clinics and camps worldwide will be able to live a unique experience of values, football and coexistence in the World Challenge, a tournament held in the Real Madrid training facilities in Madrid, Spain in March/April.
+              Players coming from Real Madrid foundation clinics and camps worldwide will be able to live a unique experience of values, football and coexistence in the World Challenge, a friendly tournament held in the Real Madrid training facilities in Madrid, Spain in March/April.
             </p>
             <div className="pt-4">
               <div className="space-y-3">
