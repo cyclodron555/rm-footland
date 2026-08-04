@@ -16,9 +16,9 @@ export default function Header() {
   const pathname = usePathname()
 
   const handleNavClick = (hash: string) => {
-    // If on homepage, just use hash navigation
+    // If on homepage, scroll to section using hash
     if (pathname === '/') {
-      // Let the default link behavior handle it
+      window.location.hash = hash
       return
     }
     // If on another page, navigate to home with the hash
